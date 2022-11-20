@@ -25,3 +25,12 @@ body {
     color: var(--main-pair-invert);
     background: var(--main-color);
 }
+
+.logo {
+    text-align: center;
+}
+
+.logo a {
+    color: var(--main-pair-color);
+    text-decoration: none;
+}
