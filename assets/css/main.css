@@ -1,0 +1,27 @@
+/**
+ * Main CSS for the site
+ */
+
+/* Import all the things */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+/* Declare Global CSS vars */
+:root {
+    --main-color: #990011;
+    --main-pair-color: #FCF6F5;
+    --main-pair-invert: #03090A;
+}
+
+/* Reset all the things */
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--main-pair-invert);
+    background: var(--main-color);
+}
