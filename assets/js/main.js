@@ -3,24 +3,6 @@
 */
 console.log("JavaScript Connected!");
 
-let questionsContainer = document.getElementById('questions');
-let answersContainer = document.getElementById('answers');
-let submitButton = document.getElementById('submit');
-
-function buildQuestions(){
-    console.log("Questions Built");
-}
-
-function showAnswers(){
-    console.log("Answers Displayed");
-}
-
-// display quiz right away
-buildQuestions();
-
-// on submit, show results
-submitButton.addEventListener('click', showAnswers);
-
 const radioQuestions = [
     {
         question: "Question 1?",
@@ -49,4 +31,29 @@ const radioQuestions = [
         },
         specialConditionAnswer: "c"
     },
-  ];
+];
+
+let questionsContainer = document.getElementById('questions');
+let answersContainer = document.getElementById('answers');
+let submitButton = document.getElementById('submit');
+
+function buildQuestions(){
+    for (let i in radioQuestions) {
+        // use of hasOwnProperty check for defensive coding!
+        if (radioQuestions.hasOwnProperty(i)) {
+            console.log(radioQuestions[i]);
+        }
+    }
+    
+    console.log("Questions Built");
+}
+
+function showAnswers(){
+    console.log("Answers Displayed");
+}
+
+// display quiz right away
+buildQuestions();
+
+// on submit, show results
+submitButton.addEventListener('click', showAnswers);
