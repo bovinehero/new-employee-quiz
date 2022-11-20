@@ -34,3 +34,31 @@ body {
     color: var(--main-pair-color);
     text-decoration: none;
 }
+
+.quiz-window {
+    display: flex;
+    flex-flow: column wrap;
+    padding: 5%;
+    align-content: center;
+}
+
+.quiz-header {
+    background: var(--main-pair-color);
+}
+
+.quiz-header > h2 {
+    text-align: center;
+}
+
+.quiz-description-wrapper {
+    background: var(--main-pair-color);
+    padding: 5%;
+}
+
+.quiz-description {
+    background: var(--main-pair-color);
+}
+
+.quiz-footer {
+    background: var(--main-pair-color);
+}
