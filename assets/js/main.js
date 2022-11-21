@@ -53,6 +53,7 @@ function buildQuestions(){
         }
     }
     console.log(questions);
+    questionsContainer.innerHTML = questions.join('');
     console.log("Questions Built");
 }
 
