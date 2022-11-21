@@ -38,13 +38,21 @@ let answersContainer = document.getElementById('answers');
 let submitButton = document.getElementById('submit');
 
 function buildQuestions(){
+    const questions = [];
     for (let i in radioQuestions) {
         // use of hasOwnProperty check for defensive coding!
         if (radioQuestions.hasOwnProperty(i)) {
             console.log(radioQuestions[i]);
+            console.log(radioQuestions[i]['question']);
+            console.log(radioQuestions[i]['answers']);
+            console.log(radioQuestions[i]['specialConditionAnswer'])
+            let question = radioQuestions[i]['question']
+            questions.push(
+                `<p>${question}</p>`
+            )
         }
     }
-    
+    console.log(questions);
     console.log("Questions Built");
 }
 
