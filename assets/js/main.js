@@ -75,7 +75,6 @@ function fetchAnswers(answersArray, questionNumber){
     }
     // console.log(htmlAnswers);
     return htmlAnswers;
-
 }
 
 function returnAnswer(questionName) {
@@ -122,12 +121,13 @@ buildQuestions();
 
 const previous = document.getElementById("previous");
 const next = document.getElementById("next");
-const slides = document.querySelectorAll(".slide");
+const slides = document.querySelectorAll(".question-slide");
 let currentSlide = 0;
 // let currentSlide = 1;
 
 function showSlide(n) {
     currentSlide = n;
+    console.log(slides)
     if(currentSlide === 0){
         previous.style.display = 'none';
     }
@@ -146,10 +146,12 @@ function showSlide(n) {
 
 function showNextSlide() {
     showSlide(currentSlide + 1);
+    console.log("next")
 }
 
 function showPreviousSlide() {
     showSlide(currentSlide - 1);
+    console.log("previous")
 }
 
 showSlide(currentSlide);
