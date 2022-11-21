@@ -1,7 +1,7 @@
 /**
 * Main JavaScript for the site
 */
-//console.log("JavaScript Connected!");
+console.log("JavaScript Connected!");
 
 const questions = [];
 const radioQuestions = [
@@ -34,9 +34,9 @@ const radioQuestions = [
     },
 ];
 
-let questionsContainer = document.getElementById('questions');
-let answersContainer = document.getElementById('answers');
-let submit = document.getElementById('submit');
+const questionsContainer = document.getElementById('questions');
+const answersContainer = document.getElementById('answers');
+const submit = document.getElementById('submit');
 
 function buildQuestions(){
     // const questions = [];
