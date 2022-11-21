@@ -86,7 +86,8 @@ function returnAnswer(questionName) {
     for (let i in answeredQuestions) {
         if (answeredQuestions.hasOwnProperty(i)){
             if (answeredQuestions[i].checked){
-                answer = answeredQuestions[i].value; 
+                answer = answeredQuestions[i].value;
+                console.log(answeredQuestions);
             }      
         }
     }
@@ -122,13 +123,15 @@ const review = document.getElementById("review");
 const slides = document.querySelectorAll(".question-slide");
 const message = document.getElementById("answers");
 const closeReview = document.getElementById("close");
+const span = document.getElementsByClassName("close-request")[0];
+const modal = document.getElementById("review-modal");
+
 let currentSlide = 0;
 
 function showSlide(n) {
     slides[currentSlide].classList.remove("active-slide");
     slides[n].classList.add("active-slide");
     currentSlide = n;
-    console.log(slides)
     if(currentSlide === 0){
         previous.style.display = "none";
     }
@@ -162,9 +165,16 @@ function reviewAnswers() {
 }
 
 function closeModal() {
-    const modal = document.getElementById("review-modal");
     modal.style.display = "none";
 }
+
+// When the user clicks anywhere outside of the open modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    closeModal();
+  }
+};
+
 
 showSlide(currentSlide);
 
@@ -173,3 +183,7 @@ previous.addEventListener("click", showPreviousSlide);
 next.addEventListener("click", showNextSlide);
 review.addEventListener("click", reviewAnswers);
 closeReview.addEventListener("click", closeModal);
+
+
+// When the user clicks on <span> (x), close the modal
+span.addEventListener("click", closeModal);
