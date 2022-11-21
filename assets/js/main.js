@@ -126,6 +126,8 @@ let currentSlide = 0;
 // let currentSlide = 1;
 
 function showSlide(n) {
+    slides[currentSlide].classList.remove('active-slide');
+    slides[n].classList.add('active-slide');
     currentSlide = n;
     console.log(slides)
     if(currentSlide === 0){
