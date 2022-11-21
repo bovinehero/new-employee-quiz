@@ -42,10 +42,6 @@ function buildQuestions(){
     for (let i in radioQuestions) {
         // use of hasOwnProperty check for defensive coding!
         if (radioQuestions.hasOwnProperty(i)) {
-            // console.log(radioQuestions[i]);
-            // console.log(radioQuestions[i]['question']);
-            // console.log(radioQuestions[i]['answers']);
-            // console.log(radioQuestions[i]['specialConditionAnswer'])
             let question = radioQuestions[i]['question']
             let answers = fetchAnswers(radioQuestions[i]['answers'], i).join('');
             questions.push(
@@ -99,45 +95,21 @@ function showAnswers(){
     const message = document.getElementById("answers");
     // clear the answer message
     message.innerHTML = "";
-    // Validator Code
-    // try {
-    //     if (document.querySelector('input[name="question1"]:checked').value != null) {
-    //         let testor = document.querySelector('input[name="question1"]:checked').value;
-    //         console.log(testor);
-    //         } else {
-    //         console.log(testor);
-    //     }        
-    // }
-    // catch(err) {
-    //     if (err.name  == 'TypeError') {
-    //         message.innerHTML = "OOPS you need to answer the question.";
-    //     } else {
-    //         console.log(err);
-    //     }
-        
-    // }
     for (i in radioQuestions){
         if (radioQuestions.hasOwnProperty(i)){
             console.log(i);
             // let questionNumber = Number(i) + 1;
+            console.log(radioQuestions[i]['question']);
             let questionIdentifier = "question" + i
             let selectedAnswer = returnAnswer(questionIdentifier);
             if (selectedAnswer){
                 console.log(selectedAnswer);
-                message.innerHTML += `You answered ${questionIdentifier} with option ${selectedAnswer}<br>`;
+                message.innerHTML += `You answered ${radioQuestions[i]['question']}<br> with option ${selectedAnswer}<br>`;
             } else {
-                console.log(`OOPS you need to answer the ${questionIdentifier}.`);
+                message.innerHTML += `OOPS looks like you didn't answer: ${radioQuestions[i]['question']}.<br>`;
             }
         }
     }
-    // let selectedAnswer = returnAnswer("question1");
-    
-    // if (selectedAnswer){
-    //     console.log(selectedAnswer);
-    //     message.innerHTML = `You answered question1 with option ${selectedAnswer}`;
-    // } else {
-    //     console.log("OOPS you need to answer the question1.");
-    // }
     console.log("Answers Displayed");
     
 }
