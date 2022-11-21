@@ -35,7 +35,7 @@ const radioQuestions = [
 
 let questionsContainer = document.getElementById('questions');
 let answersContainer = document.getElementById('answers');
-let submitButton = document.getElementById('submit');
+let submit = document.getElementById('submit');
 
 function buildQuestions(){
     const questions = [];
@@ -120,5 +120,32 @@ function showAnswers(){
 // display quiz right away
 buildQuestions();
 
+const previous = document.getElementById("previous");
+const next = document.getElementById("next");
+const slides = document.querySelectorAll(".slide");
+let currentSlide = 0;
+// let currentSlide = 1;
+
+function showSlide(n) {
+    currentSlide = n;
+    if(currentSlide === 0){
+        previous.style.display = 'none';
+    }
+    else{
+        previous.style.display = 'inline-block';
+    }
+    if(currentSlide === slides.length-1){
+        next.style.display = 'none';
+        submit.style.display = 'inline-block';
+    }
+    else{
+        next.style.display = 'inline-block';
+        submit.style.display = 'none';
+    }
+}
+
+
+showSlide(currentSlide);
+
 // on submit, show results
-submitButton.addEventListener('click', showAnswers);
+submit.addEventListener('click', showAnswers);

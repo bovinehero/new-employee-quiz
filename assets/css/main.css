@@ -66,8 +66,8 @@ body {
     top: 0px;
     width: 100%;
     z-index: 1;
-    opacity: 1;
-    transition: opacity 0.5s;
+    opacity: 0;
+    transition: opacity 5s;
 }
 
 .active-slide {
