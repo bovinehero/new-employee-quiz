@@ -68,7 +68,7 @@ function fetchAnswers(answersArray, questionNumber){
             // console.log(i);
             // console.log(answersArray[i]);
             htmlAnswers.push(
-            `<input type="radio" id="html" name="question${questionNumber}" value="${i}">
+            `<input type="radio" name="question${questionNumber}" value="${i}">
             <label for="answer${i}">${answersArray[i]}</label><br>
             `
             )
@@ -80,7 +80,26 @@ function fetchAnswers(answersArray, questionNumber){
 }
 
 function showAnswers(){
+    const message = document.getElementById("answers");
     console.log("Answers Displayed");
+    try {
+        if (document.querySelector('input[name="question1"]:checked').value != null) {
+            let testor = document.querySelector('input[name="question1"]:checked').value;
+            console.log(testor);
+            } else {
+            console.log(testor);
+        }
+        
+    }
+    catch(err) {
+        if (err.name  == 'TypeError') {
+            message.innerHTML = "OOPS Did you miss a question?";
+        } else {
+            console.log(err);
+        }
+        
+    }
+    
 }
 
 // display quiz right away
