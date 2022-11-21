@@ -79,7 +79,7 @@ body {
     background: var(--main-pair-color);
 }
 
-#submit, #next, #previous {
+#submit, #next, #previous, #review {
     background: var(--main-color);
     color: var(--main-pair-color);
     float: right;

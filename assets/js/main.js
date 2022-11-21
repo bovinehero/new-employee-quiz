@@ -64,8 +64,6 @@ function fetchAnswers(answersArray, questionNumber){
     let htmlAnswers = []
     for (let i in answersArray) {
         if (answersArray.hasOwnProperty(i)) {
-            // console.log(i);
-            // console.log(answersArray[i]);
             htmlAnswers.push(
             `<input type="radio" name="question${questionNumber}" value="${i}">
             <label for="answer${i}">${answersArray[i]}</label><br>
@@ -73,7 +71,6 @@ function fetchAnswers(answersArray, questionNumber){
             )
         }
     }
-    // console.log(htmlAnswers);
     return htmlAnswers;
 }
 
@@ -83,25 +80,19 @@ function returnAnswer(questionName) {
     for (let i in answeredQuestions) {
         if (answeredQuestions.hasOwnProperty(i)){
             if (answeredQuestions[i].checked){
-                // console.log(i, answeredQuestions[i], "this is checked");
                 answer = answeredQuestions[i].value; 
-            } else {
-                // console.log(i, answeredQuestions[i], "this is NOT checked");
-            }        
+            }      
         }
     }
     return answer;
 }
 
 function showAnswers(){
-    const message = document.getElementById("answers");
+    // const message = document.getElementById("answers");
     // clear the answer message
     message.innerHTML = "";
     for (i in radioQuestions){
         if (radioQuestions.hasOwnProperty(i)){
-            console.log(i);
-            // let questionNumber = Number(i) + 1;
-            console.log(radioQuestions[i]['question']);
             let questionIdentifier = "question" + i
             let selectedAnswer = returnAnswer(questionIdentifier);
             if (selectedAnswer){
@@ -121,9 +112,10 @@ buildQuestions();
 
 const previous = document.getElementById("previous");
 const next = document.getElementById("next");
+const review = document.getElementById("review");
 const slides = document.querySelectorAll(".question-slide");
+const message = document.getElementById("answers");
 let currentSlide = 0;
-// let currentSlide = 1;
 
 function showSlide(n) {
     slides[currentSlide].classList.remove('active-slide');
@@ -132,16 +124,20 @@ function showSlide(n) {
     console.log(slides)
     if(currentSlide === 0){
         previous.style.display = 'none';
+        message.style.display = 'none';
     }
     else{
         previous.style.display = 'inline-block';
     }
     if(currentSlide === slides.length-1){
         next.style.display = 'none';
+        review.style.display = 'inline-block';
         submit.style.display = 'inline-block';
     }
     else{
         next.style.display = 'inline-block';
+        message.style.display = 'none';
+        review.style.display = 'none';
         submit.style.display = 'none';
     }
 }
@@ -160,6 +156,5 @@ showSlide(currentSlide);
 
 // on submit, show results
 submit.addEventListener('click', showAnswers);
-
 previous.addEventListener("click", showPreviousSlide);
 next.addEventListener("click", showNextSlide);
