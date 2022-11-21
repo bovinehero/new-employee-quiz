@@ -144,8 +144,18 @@ function showSlide(n) {
     }
 }
 
+function showNextSlide() {
+    showSlide(currentSlide + 1);
+}
+
+function showPreviousSlide() {
+    showSlide(currentSlide - 1);
+}
 
 showSlide(currentSlide);
 
 // on submit, show results
 submit.addEventListener('click', showAnswers);
+
+previous.addEventListener("click", showPreviousSlide);
+next.addEventListener("click", showNextSlide);
