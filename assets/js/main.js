@@ -3,6 +3,7 @@
 */
 console.log("JavaScript Connected!");
 
+const questions = [];
 const radioQuestions = [
     {
         question: "Question 0?",
@@ -38,7 +39,7 @@ let answersContainer = document.getElementById('answers');
 let submit = document.getElementById('submit');
 
 function buildQuestions(){
-    const questions = [];
+    // const questions = [];
     for (let i in radioQuestions) {
         // use of hasOwnProperty check for defensive coding!
         if (radioQuestions.hasOwnProperty(i)) {
@@ -71,6 +72,11 @@ function fetchAnswers(answersArray, questionNumber){
             )
         }
     }
+    htmlAnswers.push(
+        `<input type="radio" name="question${questionNumber}" value="none" checked>
+        <label for="none">None Selected</label><br>
+        `
+    )
     return htmlAnswers;
 }
 
@@ -118,38 +124,34 @@ const message = document.getElementById("answers");
 let currentSlide = 0;
 
 function showSlide(n) {
-    slides[currentSlide].classList.remove('active-slide');
-    slides[n].classList.add('active-slide');
+    slides[currentSlide].classList.remove("active-slide");
+    slides[n].classList.add("active-slide");
     currentSlide = n;
     console.log(slides)
     if(currentSlide === 0){
-        previous.style.display = 'none';
-        message.style.display = 'none';
+        previous.style.display = "none";
+        message.style.display = "none";
     }
     else{
-        previous.style.display = 'inline-block';
+        previous.style.display = "inline-block";
     }
     if(currentSlide === slides.length-1){
-        next.style.display = 'none';
-        review.style.display = 'inline-block';
-        submit.style.display = 'inline-block';
+        next.style.display = "none";
+        submit.style.display = "inline-block";
     }
     else{
-        next.style.display = 'inline-block';
-        message.style.display = 'none';
-        review.style.display = 'none';
-        submit.style.display = 'none';
+        next.style.display = "inline-block";
+        message.style.display = "none";
+        submit.style.display = "none";
     }
 }
 
 function showNextSlide() {
     showSlide(currentSlide + 1);
-    console.log("next")
 }
 
 function showPreviousSlide() {
     showSlide(currentSlide - 1);
-    console.log("previous")
 }
 
 showSlide(currentSlide);
