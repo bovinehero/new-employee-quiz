@@ -10,6 +10,7 @@
     --main-color: #990011;
     --main-pair-color: #FCF6F5;
     --main-pair-invert: #03090A;
+    --modal-bg-color: rgba(3,9,0,0.6);
 }
 
 /* Reset all the things */
@@ -79,7 +80,7 @@ body {
     background: var(--main-pair-color);
 }
 
-#submit, #next, #previous, #review {
+#submit, #next, #previous, #review, #close {
     background: var(--main-color);
     color: var(--main-pair-color);
     float: right;
@@ -103,4 +104,24 @@ body {
     height: 100%;
     overflow: auto;
     background-color: var(--modal-bg-color); 
+}
+
+.modal-content {
+    background-color: var(--main-pair-color);
+    top: 10px;
+    margin: 10px auto;
+    padding: 20px;
+    border: 1px solid var(--main-color);
+    color: var(--main-color);
+    width: 90%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+}
+
+.modal-content > div {
+    padding-bottom: 1rem;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
 }
