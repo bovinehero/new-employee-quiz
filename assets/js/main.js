@@ -5,7 +5,7 @@ console.log("JavaScript Connected!");
 
 const radioQuestions = [
     {
-        question: "Question 1?",
+        question: "Question 0?",
         answers: {
         a: "radio option a",
         b: "radio option b",
@@ -14,7 +14,7 @@ const radioQuestions = [
         specialConditionAnswer: "a"
     },
     {
-        question: "Question 2?",
+        question: "Question 1?",
         answers: {
             a: "radio option a",
             b: "radio option b",
@@ -23,7 +23,7 @@ const radioQuestions = [
         specialConditionAnswer: "b"
     },
     {
-        question: "Question 3?",
+        question: "Question 2?",
         answers: {
             a: "radio option a",
             b: "radio option b",
@@ -81,41 +81,63 @@ function fetchAnswers(answersArray, questionNumber){
 
 function returnAnswer(questionName) {
     let answeredQuestions = document.getElementsByName(questionName);
+    let answer = "";
     for (let i in answeredQuestions) {
         if (answeredQuestions.hasOwnProperty(i)){
             if (answeredQuestions[i].checked){
-                console.log(i, answeredQuestions[i], "this is checked");
+                // console.log(i, answeredQuestions[i], "this is checked");
+                answer = answeredQuestions[i].value; 
             } else {
-                console.log(i, answeredQuestions[i], "this is NOT checked");
+                // console.log(i, answeredQuestions[i], "this is NOT checked");
             }        
         }
     }
-
+    return answer;
 }
-
 
 function showAnswers(){
     const message = document.getElementById("answers");
     // clear the answer message
     message.innerHTML = "";
     // Validator Code
-    try {
-        if (document.querySelector('input[name="question1"]:checked').value != null) {
-            let testor = document.querySelector('input[name="question1"]:checked').value;
-            console.log(testor);
-            } else {
-            console.log(testor);
-        }        
-    }
-    catch(err) {
-        if (err.name  == 'TypeError') {
-            message.innerHTML = "OOPS you need to answer the question.";
-        } else {
-            console.log(err);
-        }
+    // try {
+    //     if (document.querySelector('input[name="question1"]:checked').value != null) {
+    //         let testor = document.querySelector('input[name="question1"]:checked').value;
+    //         console.log(testor);
+    //         } else {
+    //         console.log(testor);
+    //     }        
+    // }
+    // catch(err) {
+    //     if (err.name  == 'TypeError') {
+    //         message.innerHTML = "OOPS you need to answer the question.";
+    //     } else {
+    //         console.log(err);
+    //     }
         
+    // }
+    for (i in radioQuestions){
+        if (radioQuestions.hasOwnProperty(i)){
+            console.log(i);
+            // let questionNumber = Number(i) + 1;
+            let questionIdentifier = "question" + i
+            let selectedAnswer = returnAnswer(questionIdentifier);
+            if (selectedAnswer){
+                console.log(selectedAnswer);
+                message.innerHTML += `You answered ${questionIdentifier} with option ${selectedAnswer}<br>`;
+            } else {
+                console.log(`OOPS you need to answer the ${questionIdentifier}.`);
+            }
+        }
     }
-    returnAnswer("question1");
+    // let selectedAnswer = returnAnswer("question1");
+    
+    // if (selectedAnswer){
+    //     console.log(selectedAnswer);
+    //     message.innerHTML = `You answered question1 with option ${selectedAnswer}`;
+    // } else {
+    //     console.log("OOPS you need to answer the question1.");
+    // }
     console.log("Answers Displayed");
     
 }
