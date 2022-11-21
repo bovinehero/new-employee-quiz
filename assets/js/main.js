@@ -121,6 +121,7 @@ const next = document.getElementById("next");
 const review = document.getElementById("review");
 const slides = document.querySelectorAll(".question-slide");
 const message = document.getElementById("answers");
+const closeReview = document.getElementById("close");
 let currentSlide = 0;
 
 function showSlide(n) {
@@ -158,13 +159,17 @@ function reviewAnswers() {
     const modal = document.getElementById("review-modal");
     modal.style.display = "block";
     showAnswers();
-    // console.log(message);
+}
+
+function closeModal() {
+    const modal = document.getElementById("review-modal");
+    modal.style.display = "none";
 }
 
 showSlide(currentSlide);
 
-// on submit, show results
 submit.addEventListener('click', showAnswers);
 previous.addEventListener("click", showPreviousSlide);
 next.addEventListener("click", showNextSlide);
-review.addEventListener("click",reviewAnswers)
+review.addEventListener("click", reviewAnswers);
+closeReview.addEventListener("click", closeModal);
