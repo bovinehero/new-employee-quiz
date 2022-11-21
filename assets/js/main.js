@@ -47,15 +47,15 @@ function buildQuestions(){
             // console.log(radioQuestions[i]['answers']);
             // console.log(radioQuestions[i]['specialConditionAnswer'])
             let question = radioQuestions[i]['question']
-            let answers = fetchAnswers(radioQuestions[i]['answers'])
+            let answers = fetchAnswers(radioQuestions[i]['answers'], i)
             questions.push(
                 `<p>${question}</p>
-                <input type="radio" id="html" name="question${i}" value="answera">
-                <label for="answera">Answer A</label><br>
-                <input type="radio" name="question${i}" value="answerb">
-                <label for="answerb">Answer B</label><br>
-                <input type="radio" name="question${i}" value="answerc">
-                <label for="answerc">Answer C</label>
+                <input type="radio" id="html" name="question${i}" value="a">
+                <label for="answerA">radio option a</label><br>
+                <input type="radio" name="question${i}" value="b">
+                <label for="answerB">radio option b</label><br>
+                <input type="radio" name="question${i}" value="c">
+                <label for="answerC">radio option c</label>
                 `
             )
         }
@@ -65,8 +65,22 @@ function buildQuestions(){
     console.log("Questions Built");
 }
 
-function fetchAnswers(answersArray){
-    console.log(answersArray)
+function fetchAnswers(answersArray, questionNumber){
+    console.log(answersArray);
+    let htmlAnswers = []
+    for (let i in answersArray) {
+        if (answersArray.hasOwnProperty(i)) {
+            console.log(i);
+            console.log(answersArray[i]);
+            htmlAnswers.push(
+            `<input type="radio" id="html" name="question${questionNumber}" value="${i}">
+            <label for="answer${i}">${answersArray[i]}</label><br>
+            `
+            )
+        }
+    }
+    console.log(htmlAnswers);
+
 }
 
 function showAnswers(){
