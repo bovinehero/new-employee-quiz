@@ -153,7 +153,7 @@ input[type=radio] {
 @media screen and (min-width: 480px) {
     .quiz-description-wrapper {
         background: var(--main-pair-color);
-        padding: 10rem;
+        padding: 4rem;
     }
     h2 {
         font-size: 2rem;
@@ -161,7 +161,7 @@ input[type=radio] {
     }
 
     p {
-        font-size: 2rem;
+        font-size: 1.5rem;
         padding-bottom: 1rem;
     }
 
