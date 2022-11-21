@@ -73,7 +73,7 @@ function fetchAnswers(answersArray, questionNumber){
         }
     }
     htmlAnswers.push(
-        `<input type="radio" name="question${questionNumber}" value="none" checked>
+        `<input type="radio" name="question${questionNumber}" value="not answered" checked>
         <label for="none">None Selected</label><br>
         `
     )
@@ -94,7 +94,7 @@ function returnAnswer(questionName) {
 }
 
 function showAnswers(){
-    // const message = document.getElementById("answers");
+    const message = document.getElementById("answers");
     // clear the answer message
     message.innerHTML = "";
     for (i in radioQuestions){
@@ -103,7 +103,7 @@ function showAnswers(){
             let selectedAnswer = returnAnswer(questionIdentifier);
             if (selectedAnswer){
                 console.log(selectedAnswer);
-                message.innerHTML += `You answered ${radioQuestions[i]['question']}<br> with option ${selectedAnswer}<br>`;
+                message.innerHTML += `You answered ${radioQuestions[i]['question']}:<br> ${selectedAnswer}<br>`;
             } else {
                 message.innerHTML += `OOPS looks like you didn't answer: ${radioQuestions[i]['question']}.<br>`;
             }
@@ -130,19 +130,19 @@ function showSlide(n) {
     console.log(slides)
     if(currentSlide === 0){
         previous.style.display = "none";
-        message.style.display = "none";
     }
     else{
         previous.style.display = "inline-block";
     }
     if(currentSlide === slides.length-1){
         next.style.display = "none";
+        review.style.display = "inline-block";
         submit.style.display = "inline-block";
     }
     else{
         next.style.display = "inline-block";
-        message.style.display = "none";
         submit.style.display = "none";
+        review.style.display = "none";
     }
 }
 
@@ -154,9 +154,17 @@ function showPreviousSlide() {
     showSlide(currentSlide - 1);
 }
 
+function reviewAnswers() {
+    const modal = document.getElementById("review-modal");
+    modal.style.display = "block";
+    showAnswers();
+    // console.log(message);
+}
+
 showSlide(currentSlide);
 
 // on submit, show results
 submit.addEventListener('click', showAnswers);
 previous.addEventListener("click", showPreviousSlide);
 next.addEventListener("click", showNextSlide);
+review.addEventListener("click",reviewAnswers)

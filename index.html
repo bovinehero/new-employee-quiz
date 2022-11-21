@@ -19,17 +19,23 @@
             <h2>Questionnaire Title</h2>
         </div>
         <div class="quiz-description-wrapper">
+            <form method="post" action="https://formdump.codeinstitute.net/">
             <div class="quiz-description">
                 <div id="questions">
                 </div>
-                <div id="answers">
-                </div>
             </div>
-            <button id="submit">Submit</button>
+            
+            </form>
             <button id="next">Next</button>
             <button id="previous">Previous</button>
+            <button id="review">Review</button>
+            
         </div>
         <div class="quiz-footer">
+            <div class="modal" id="review-modal">
+                <div id="answers"></div>
+                <button id="submit">Submit</button>
+            </div>
         </div>
     </section>
     <script src="assets/js/main.js"></script>
