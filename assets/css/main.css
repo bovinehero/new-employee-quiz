@@ -39,8 +39,8 @@ body {
 .quiz-window {
     display: flex;
     flex-flow: column wrap;
-    padding: 5%;
-    align-content: center;
+    padding: 1rem;
+    justify-content: center;
 }
 
 .quiz-header {
@@ -53,12 +53,13 @@ body {
 
 .quiz-description-wrapper {
     background: var(--main-pair-color);
+    padding: 1rem;
 }
 
 .quiz-description {
     background: var(--main-pair-color);
     position: relative;
-    height: 250px;
+    height: 50vh;
 }
 
 .question-slide {
