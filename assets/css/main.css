@@ -141,3 +141,36 @@ body {
     color: var(--main-color);
     text-decoration: none;
 }
+
+label {
+    padding: 1rem;
+}
+
+input[type=radio] {
+    accent-color: var(--main-color);
+}
+
+@media screen and (min-width: 480px) {
+    .quiz-description-wrapper {
+        background: var(--main-pair-color);
+        padding: 10rem;
+    }
+    h2 {
+        font-size: 2rem;
+        padding-top: 1rem;
+    }
+
+    p {
+        font-size: 2rem;
+        padding-bottom: 1rem;
+    }
+
+    input[type=radio]{
+        margin-bottom: 1.5rem;
+    }
+
+    label {
+        margin: 1rem;
+    }
+
+}
