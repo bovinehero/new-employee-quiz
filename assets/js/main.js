@@ -42,19 +42,31 @@ function buildQuestions(){
     for (let i in radioQuestions) {
         // use of hasOwnProperty check for defensive coding!
         if (radioQuestions.hasOwnProperty(i)) {
-            console.log(radioQuestions[i]);
-            console.log(radioQuestions[i]['question']);
-            console.log(radioQuestions[i]['answers']);
-            console.log(radioQuestions[i]['specialConditionAnswer'])
+            // console.log(radioQuestions[i]);
+            // console.log(radioQuestions[i]['question']);
+            // console.log(radioQuestions[i]['answers']);
+            // console.log(radioQuestions[i]['specialConditionAnswer'])
             let question = radioQuestions[i]['question']
+            let answers = fetchAnswers(radioQuestions[i]['answers'])
             questions.push(
-                `<p>${question}</p>`
+                `<p>${question}</p>
+                <input type="radio" id="html" name="question${i}" value="answera">
+                <label for="answera">Answer A</label><br>
+                <input type="radio" name="question${i}" value="answerb">
+                <label for="answerb">Answer B</label><br>
+                <input type="radio" name="question${i}" value="answerc">
+                <label for="answerc">Answer C</label>
+                `
             )
         }
     }
-    console.log(questions);
+    // console.log(questions);
     questionsContainer.innerHTML = questions.join('');
     console.log("Questions Built");
+}
+
+function fetchAnswers(answersArray){
+    console.log(answersArray)
 }
 
 function showAnswers(){
