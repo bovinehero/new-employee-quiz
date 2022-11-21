@@ -79,26 +79,44 @@ function fetchAnswers(answersArray, questionNumber){
 
 }
 
+function returnAnswer(questionName) {
+    let answeredQuestions = document.getElementsByName(questionName);
+    for (let i in answeredQuestions) {
+        if (answeredQuestions.hasOwnProperty(i)){
+            if (answeredQuestions[i].checked){
+                console.log(i, answeredQuestions[i], "this is checked");
+            } else {
+                console.log(i, answeredQuestions[i], "this is NOT checked");
+            }        
+        }
+    }
+
+}
+
+
 function showAnswers(){
     const message = document.getElementById("answers");
-    console.log("Answers Displayed");
+    // clear the answer message
+    message.innerHTML = "";
+    // Validator Code
     try {
         if (document.querySelector('input[name="question1"]:checked').value != null) {
             let testor = document.querySelector('input[name="question1"]:checked').value;
             console.log(testor);
             } else {
             console.log(testor);
-        }
-        
+        }        
     }
     catch(err) {
         if (err.name  == 'TypeError') {
-            message.innerHTML = "OOPS Did you miss a question?";
+            message.innerHTML = "OOPS you need to answer the question.";
         } else {
             console.log(err);
         }
         
     }
+    returnAnswer("question1");
+    console.log("Answers Displayed");
     
 }
 
