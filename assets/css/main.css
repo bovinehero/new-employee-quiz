@@ -62,3 +62,16 @@ body {
 .quiz-footer {
     background: var(--main-pair-color);
 }
+
+#submit {
+    background: var(--main-color);
+    color: var(--main-pair-color);
+    float: right;
+    padding-right: 1rem;
+    margin-left: auto;
+    /* margin-right: 10px; */
+    border: none;
+    margin: 8px 4px;
+    padding: 4px 8px;
+    text-decoration: none;
+}
