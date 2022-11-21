@@ -47,15 +47,10 @@ function buildQuestions(){
             // console.log(radioQuestions[i]['answers']);
             // console.log(radioQuestions[i]['specialConditionAnswer'])
             let question = radioQuestions[i]['question']
-            let answers = fetchAnswers(radioQuestions[i]['answers'], i)
+            let answers = fetchAnswers(radioQuestions[i]['answers'], i).join('');
             questions.push(
                 `<p>${question}</p>
-                <input type="radio" id="html" name="question${i}" value="a">
-                <label for="answerA">radio option a</label><br>
-                <input type="radio" name="question${i}" value="b">
-                <label for="answerB">radio option b</label><br>
-                <input type="radio" name="question${i}" value="c">
-                <label for="answerC">radio option c</label>
+                ${answers}
                 `
             )
         }
@@ -70,8 +65,8 @@ function fetchAnswers(answersArray, questionNumber){
     let htmlAnswers = []
     for (let i in answersArray) {
         if (answersArray.hasOwnProperty(i)) {
-            console.log(i);
-            console.log(answersArray[i]);
+            // console.log(i);
+            // console.log(answersArray[i]);
             htmlAnswers.push(
             `<input type="radio" id="html" name="question${questionNumber}" value="${i}">
             <label for="answer${i}">${answersArray[i]}</label><br>
@@ -79,7 +74,8 @@ function fetchAnswers(answersArray, questionNumber){
             )
         }
     }
-    console.log(htmlAnswers);
+    // console.log(htmlAnswers);
+    return htmlAnswers;
 
 }
 
