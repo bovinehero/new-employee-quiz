@@ -1,7 +1,7 @@
 /**
 * Main JavaScript for the site
 */
-console.log("JavaScript Connected!");
+//console.log("JavaScript Connected!");
 
 const questions = [];
 const radioQuestions = [
@@ -12,7 +12,7 @@ const radioQuestions = [
         b: "radio option b",
         c: "radio option c",
         },
-        specialConditionAnswer: "a"
+        inputValue: "q0"
     },
     {
         question: "Question 1?",
@@ -21,7 +21,7 @@ const radioQuestions = [
             b: "radio option b",
             c: "radio option c",
         },
-        specialConditionAnswer: "b"
+        inputValue: "q1"
     },
     {
         question: "Question 2?",
@@ -30,7 +30,7 @@ const radioQuestions = [
             b: "radio option b",
             c: "radio option c",
         },
-        specialConditionAnswer: "c"
+        inputValue: "q2"
     },
 ];
 
@@ -43,8 +43,9 @@ function buildQuestions(){
     for (let i in radioQuestions) {
         // use of hasOwnProperty check for defensive coding!
         if (radioQuestions.hasOwnProperty(i)) {
+            console.log(radioQuestions[i]['answers']['a'])
             let question = radioQuestions[i]['question']
-            let answers = fetchAnswers(radioQuestions[i]['answers'], i).join('');
+            let answers = fetchAnswers(radioQuestions[i]['answers'], radioQuestions[i]['inputValue']).join('');
             questions.push(
                 `
                 <div class="question-slide">
@@ -55,26 +56,27 @@ function buildQuestions(){
             )
         }
     }
-    // console.log(questions);
+    // //console.log(questions);
     questionsContainer.innerHTML = questions.join('');
-    console.log("Questions Built");
+    //console.log("Questions Built");
 }
 
-function fetchAnswers(answersArray, questionNumber){
+function fetchAnswers(answersArray, inputName){
     console.log(answersArray);
     let htmlAnswers = []
     for (let i in answersArray) {
         if (answersArray.hasOwnProperty(i)) {
+            console.log(answersArray[i], i);
             htmlAnswers.push(
-            `<input type="radio" name="question${questionNumber}" value="${i}">
-            <label for="answer${i}">${answersArray[i]}</label><br>
+            `<input type="radio" name="${inputName}" value="${answersArray[i]}">
+            <label for="${inputName}">${answersArray[i]}</label><br>
             `
             )
         }
     }
     htmlAnswers.push(
-        `<input type="radio" name="question${questionNumber}" value="not answered" checked>
-        <label for="none">None Selected</label><br>
+        `<input type="radio" name="${inputName}" value="not answered" checked>
+        <label for="${inputName}">None Selected</label><br>
         `
     )
     return htmlAnswers;
@@ -87,7 +89,7 @@ function returnAnswer(questionName) {
         if (answeredQuestions.hasOwnProperty(i)){
             if (answeredQuestions[i].checked){
                 answer = answeredQuestions[i].value;
-                console.log(answeredQuestions);
+                //console.log(answeredQuestions);
             }      
         }
     }
@@ -103,14 +105,14 @@ function showAnswers(){
             let questionIdentifier = "question" + i
             let selectedAnswer = returnAnswer(questionIdentifier);
             if (selectedAnswer){
-                console.log(selectedAnswer);
+                //console.log(selectedAnswer);
                 message.innerHTML += `You answered ${radioQuestions[i]['question']}:<br> ${selectedAnswer}<br>`;
             } else {
                 message.innerHTML += `OOPS looks like you didn't answer: ${radioQuestions[i]['question']}.<br>`;
             }
         }
     }
-    console.log("Answers Displayed");
+    //console.log("Answers Displayed");
     
 }
 
