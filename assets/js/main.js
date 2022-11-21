@@ -45,8 +45,11 @@ function buildQuestions(){
             let question = radioQuestions[i]['question']
             let answers = fetchAnswers(radioQuestions[i]['answers'], i).join('');
             questions.push(
-                `<p>${question}</p>
-                ${answers}
+                `
+                <div class="question-slide">
+                    <p>${question}</p>
+                    ${answers}
+                </div>
                 `
             )
         }
