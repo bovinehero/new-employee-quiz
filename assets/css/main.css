@@ -125,3 +125,18 @@ body {
     flex-flow: column wrap;
     justify-content: space-between;
 }
+
+.close-request{
+    color: var(--main-color);
+    font-size: 28px;
+    font-weight: bold;
+    float: right;
+    padding-right: 1rem;
+    margin-left: auto;
+    order: 2;
+}
+
+.close-request:hover, .close-request:focus {
+    color: var(--main-color);
+    text-decoration: none;
+}
