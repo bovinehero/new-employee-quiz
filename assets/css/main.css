@@ -58,7 +58,7 @@ body {
 .quiz-description {
     background: var(--main-pair-color);
     position: relative;
-    height: 200px;
+    height: 250px;
 }
 
 .question-slide {

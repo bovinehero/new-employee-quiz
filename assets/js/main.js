@@ -1,42 +1,172 @@
 /**
 * Main JavaScript for the site
 */
-console.log("JavaScript Connected!");
+//console.log("JavaScript Connected!");
 
 const questions = [];
+
+// const radioQuestions = [
+//     {
+//         question: "How many CPUs are required?",
+//         answers: {
+//         a: "1",
+//         b: "2",
+//         c: "4",
+//         d: "8",
+//         },
+//         inputValue: "cpu"
+//     },
+//     {
+//         question: "How many GBs of Memory?",
+//         answers: {
+//             a: "1",
+//             b: "2",
+//             c: "4",
+//             d: "8",
+//             e: "16",
+//             f: "32",
+//             g: "64",
+//             h: "128"
+//         },
+//         inputValue: "mem"
+//     },
+//     {
+//         question: "What Additional Data Disk Size is Required?",
+//         answers: {
+//             a: "20",
+//             b: "40",
+//             c: "80",
+//             d: "120",
+//             e: "160",
+//             f: "240",
+//             g: "480",
+//             h: "960"
+//         },
+//         inputValue: "datad"
+//     },
+//     {
+//         question: "What Location is Needed?",
+//         answers: {
+//             a: "US West (Oregon)",
+//             b: "US East (Ohio)",
+//             c: "South America (São Paulo)",
+//             d: "Europe (Ireland)",
+//             e: "Europe (London) Region",
+//             f: "Middle East (Bahrain) Region",
+//             g: "Australia (Sydney) Region",
+//             h: "Asia Pacific (Seoul)"
+//         },
+//         inputValue: "location"
+//     },
+//     {
+//         question: "What Environment is being deployed to?",
+//         answers: {
+//             a: "Production",
+//             b: "Staging",
+//             c: "Testing",
+//             d: "Development",
+//             e: "External"
+//         },
+//         inputValue: "env"
+//     },
+//     {
+//         question: "What Operating System should be installed?",
+//         answers: {
+//             a: "Windows Server 2019",
+//             b: "Windows 11",
+//             c: "Linux: Debian",
+//             d: "Linux: Centos",
+//             e: "Linux: Kali",
+//             f: "BSD: MacOS",
+//             g: "BSD: Firewall"
+//         },
+//         inputValue: "osType"
+//     }
+// ];
+
+
 const radioQuestions = [
     {
-        question: "Question 0?",
+        question: "How many CPUs are required?",
         answers: {
-        a: "radio option a",
-        b: "radio option b",
-        c: "radio option c",
+            a: "1",
+            b: "2",
+            c: "4",
+            d: "8",
         },
-        inputValue: "q0"
+        inputValue: "cpu"
     },
     {
-        question: "Question 1?",
+        question: "How many GBs of Memory?",
         answers: {
-            a: "radio option a",
-            b: "radio option b",
-            c: "radio option c",
+            a: "1",
+            b: "2",
+            c: "4",
+            d: "8",
+            e: "16",
+            f: "32",
+            g: "64",
+            h: "128"
         },
-        inputValue: "q1"
+        inputValue: "mem"
     },
     {
-        question: "Question 2?",
+        question: "What Additional Data Disk Size is Required?",
         answers: {
-            a: "radio option a",
-            b: "radio option b",
-            c: "radio option c",
+            a: "20",
+            b: "40",
+            c: "80",
+            d: "120",
+            e: "160",
+            f: "240",
+            g: "480",
+            h: "960"
         },
-        inputValue: "q2"
+        inputValue: "datad"
     },
+    {
+        question: "What Location is Needed?",
+        answers: {
+            a: "US West (Oregon)",
+            b: "US East (Ohio)",
+            c: "South America (São Paulo)",
+            d: "Europe (Ireland)",
+            e: "Europe (London) Region",
+            f: "Middle East (Bahrain) Region",
+            g: "Australia (Sydney) Region",
+            h: "Asia Pacific (Seoul)"
+        },
+        inputValue: "location"
+    },
+    {
+        question: "What Environment is being deployed to?",
+        answers: {
+            a: "Production",
+            b: "Staging",
+            c: "Testing",
+            d: "Development",
+            e: "External"
+        },
+        inputValue: "env"
+    },
+    {
+        question: "What Operating System should be installed?",
+        answers: {
+            a: "Windows Server 2019",
+            b: "Windows 11",
+            c: "Linux: Debian",
+            d: "Linux: Centos",
+            e: "Linux: Kali",
+            f: "BSD: MacOS",
+            g: "BSD: Firewall"
+        },
+        inputValue: "osType"
+    }
 ];
 
-const questionsContainer = document.getElementById('questions');
-const answersContainer = document.getElementById('answers');
-const submit = document.getElementById('submit');
+let questionsContainer = document.getElementById('questions');
+let answersContainer = document.getElementById('answers');
+let submit = document.getElementById('submit');
 
 function buildQuestions(){
     // const questions = [];
@@ -76,7 +206,7 @@ function fetchAnswers(answersArray, inputName){
     }
     htmlAnswers.push(
         `<input type="radio" name="${inputName}" value="not answered" checked>
-        <label for="${inputName}">None Selected</label><br>
+        <label for="none">None Selected</label><br>
         `
     )
     return htmlAnswers;
@@ -112,7 +242,6 @@ function showAnswers(){
             }
         }
     }
-    //console.log("Answers Displayed");
     
 }
 
