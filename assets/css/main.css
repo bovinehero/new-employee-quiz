@@ -56,6 +56,23 @@ body {
 
 .quiz-description {
     background: var(--main-pair-color);
+    position: relative;
+    height: 200px;
+}
+
+.question-slide {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    z-index: 1;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+.active-slide {
+    opacity: 1;
+    z-index: 2;
 }
 
 .quiz-footer {
