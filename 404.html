@@ -85,10 +85,16 @@
         setTimeout(writeCodeLine(lineNumber, codeLine), timing)
       }
       function writeCodeLine(lineNumber, codeLine) {
-        let i = 0;
+        // let i = 0;
+        let i = codeLine.length;
         console.log(document.getElementsByTagName("code")[lineNumber].innerHTML = codeLine.slice(0, i) + "|I am a cursor>");
         console.log(lineNumber, codeLine)
-        document.getElementsByTagName("code")[lineNumber].innerHTML = codeLine + "helllooooo";
+        if (i == codeLine.length) {
+            console.log("entire line is written")
+            document.getElementsByTagName("code")[lineNumber].innerHTML = codeLine + "helllooooo";
+          }
+
+        
       }
       typeInConsole(0, 20000);
     </script>
