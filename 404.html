@@ -68,49 +68,19 @@
         </p>
     </div>  
     <div class="content-404">
-      <div class="console-wrapper">
       <div class="console">
-        <code><span>Placeholder text</span></code><br>
-        <code><span>placeholder line one code</span></code><br>
-        <code><span>placeholder line two code</span></code><br>
-        <code><span>placeholder line four code</span></code><br>
-        <code><span>placeholder line five code</span></code><br>
-        <code><span>placeholder line six code</span></code><br>
-        <code><span>placeholder line seven code</span></code><br>
+        <code><span>Dave?</span></code><br>
+        <code><span>Is that you Dave?</span></code><br>
+        <code><span>No Dave knows how to use the application.</span></code><br>
+        <code><span>Unless it's me.</span></code><br>
+        <code><span>Is it me?</span></code><br>
+        <code><span>Are you here by my mistake?</span></code><br>
+        <code><span>Try going back to home human.</span></code><br>
+        <code><span>Are you a bot?</span></code><br>
+        <code><span>If so end of line, program!</span></code><br>
       </div>
     </div>
-    </div>
   </section>
-    <!-- <script>
-      // iterator function to type one line at a time in an array
-      function typeInConsole(lineNumber, timing) {
-        // collect the contents of <code> at lineNumber
-        let codeLine = document.getElementsByTagName("code")[lineNumber].innerHTML;
-        //clean that line in the page
-        document.getElementsByTagName("code")[lineNumber].innerHTML = "";
-        console.log(codeLine);
-        setTimeout(writeCodeLine(lineNumber, codeLine), timing)
-      }
-      function writeCodeLine(lineNumber, codeLine) {
-        let i = 0;
-        let seInt = setInterval(function () {
-          i++;
-          if (i == codeLine.length) {
-            i++;  
-            clearInterval(seInt);
-            document.getElementsByTagName("code")[lineNumber].innerHTML = codeLine;
-          }
-        }, 200)       
-      }
-      typeInConsole(0, 20000);
-      typeInConsole(1, 40000);
-      typeInConsole(2, 80000);
-      typeInConsole(3, 100000);
-      typeInConsole(4, 120000);
-      typeInConsole(5, 120000);
-      typeInConsole(6, 140000);
-      typeInConsole(7, 160000);
-    </script> -->
     <script>
       function typeInConsole(lineNumber, timing) {
         let codeLine = document.getElementsByTagName("code")[lineNumber].innerHTML.toString();
@@ -120,7 +90,7 @@
           let se = setInterval(function () {
             i++;
             document.getElementsByTagName("code")[lineNumber].innerHTML =
-            codeLine.slice(0, i) + "| this is the cursor>>>";
+            codeLine.slice(0, i) + "&#9999;";
             if (i == codeLine.length) {
               clearInterval(se);
               document.getElementsByTagName("code")[lineNumber].innerHTML = codeLine;
@@ -136,6 +106,8 @@
       typeInConsole(4, 2000);
       typeInConsole(5, 2500);
       typeInConsole(6, 3000);
+      typeInConsole(7, 3500);
+      typeInConsole(8, 4000);
     </script>
 </body>
 </html>
