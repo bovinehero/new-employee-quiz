@@ -77,9 +77,16 @@
     <script>
       // iterator function to type one line at a time in an array
       function typeInConsole(lineNumber, timing) {
-        console.log(lineNumber, timing);
+        // collect the contents of <code> at lineNumber
+        let codeLine = document.getElementsByTagName("code")[lineNumber].innerHTML;
+        //clean that line in the page
+        document.getElementsByTagName("code")[lineNumber].innerHTML = "";
+        console.log(codeLine);
+        setTimeout(writeCodeLine, 2000)
       }
-      
+      function writeCodeLine() {
+        console.log("I am code writing");
+      }
       typeInConsole(0, 0);
     </script>
 </body>
