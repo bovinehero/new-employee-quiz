@@ -26,16 +26,32 @@
       background: var(--main-color);
     }
 
-    a {
-      color: var(--main-pair-color);
-      text-decoration: none;
+    #section-404{
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background: var(--main-color);
     }
-
-
+    .header-404{
+      font-size: 48px;
+    }
+    .content-404{
+      text-align: center;
+    }
   </style>
 </head>
 <body>
-  <h1>404 Error</h1>
-  <p>Go back <a href="/">HOME</a></p>
+  <section id="section-404">
+    <div class="content-404">
+        <h2 class="header-404">404 Error!</h2>
+        <p>
+          <a href="/">GO BACK HOME</a>
+        </p>
+    </div>  
+    <div class="content-404">
+        Placeholder text
+    </div>
 </body>
 </html>
