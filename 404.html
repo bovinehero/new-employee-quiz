@@ -82,13 +82,15 @@
         //clean that line in the page
         document.getElementsByTagName("code")[lineNumber].innerHTML = "";
         console.log(codeLine);
-        setTimeout(writeCodeLine(lineNumber, codeLine), 5000000)
+        setTimeout(writeCodeLine(lineNumber, codeLine), timing)
       }
       function writeCodeLine(lineNumber, codeLine) {
+        let i = 0;
+        console.log(document.getElementsByTagName("code")[lineNumber].innerHTML = codeLine.slice(0, i) + "|I am a cursor>");
         console.log(lineNumber, codeLine)
         document.getElementsByTagName("code")[lineNumber].innerHTML = codeLine + "helllooooo";
       }
-      typeInConsole(0, 0);
+      typeInConsole(0, 20000);
     </script>
 </body>
 </html>
