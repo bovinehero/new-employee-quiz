@@ -82,10 +82,11 @@
         //clean that line in the page
         document.getElementsByTagName("code")[lineNumber].innerHTML = "";
         console.log(codeLine);
-        setTimeout(writeCodeLine(codeLine), 2000)
+        setTimeout(writeCodeLine(lineNumber, codeLine), 5000000)
       }
-      function writeCodeLine(codeLine) {
-        console.log(codeLine);
+      function writeCodeLine(lineNumber, codeLine) {
+        console.log(lineNumber, codeLine)
+        document.getElementsByTagName("code")[lineNumber].innerHTML = codeLine + "helllooooo";
       }
       typeInConsole(0, 0);
     </script>
