@@ -1,10 +1,23 @@
 /**
 * Main JavaScript for the site
 */
-console.log("JavaScript Connected!");
 
+// init questions varaible for quiz
 const questions = [];
 
+/** defined questions array for the quiz, questions with more than 8 answers options may spill out of the answer box on smaller screens. 
+ * should follow the following format:
+ * {
+ *   question: "This is the question that will be displayed",
+ *   answers: {
+ *      a: "this is answer 1",
+ *      b: "this is answer 2",
+ *      c: "this is answer 3",
+ *      d: "this is answer 4",
+ *   },
+ *  inputValue: "data value that is submitted downstream as a key for key pair value"
+ * } 
+ * */
 const radioQuestions = [
     {
         question: "How many CPUs are required?",
@@ -84,14 +97,17 @@ const radioQuestions = [
     }
 ];
 
+// define the DOM elements to set up the quiz area
 let questionsContainer = document.getElementById('questions');
 let answersContainer = document.getElementById('answers');
 let submit = document.getElementById('submit');
 
+/**
+ * build out the questions html, relies on fetchAnswers() to handle the multiple choice answer formatting
+ * use of hasOwnProperty check for defensive coding, let i in array has potential injection issues
+ */
 function buildQuestions(){
-    // const questions = [];
     for (let i in radioQuestions) {
-        // use of hasOwnProperty check for defensive coding!
         if (radioQuestions.hasOwnProperty(i)) {
             let question = radioQuestions[i]['question']
             let answers = fetchAnswers(radioQuestions[i]['answers'], radioQuestions[i]['inputValue']).join('');
@@ -108,13 +124,19 @@ function buildQuestions(){
     questionsContainer.innerHTML = questions.join('');
 }
 
-function fetchAnswers(answersArray, inputName){
+/**
+ * Return the HTML code for a given question as an array
+ * @param {Object} answersData - the key pairs for the question answers
+ * @param {string} inputName - details for the radio input name and label
+ * @returns 
+ */
+function fetchAnswers(answersData, inputName){
     let htmlAnswers = []
-    for (let i in answersArray) {
-        if (answersArray.hasOwnProperty(i)) {
+    for (let i in answersData) {
+        if (answersData.hasOwnProperty(i)) {
             htmlAnswers.push(
-            `<input type="radio" name="${inputName}" value="${answersArray[i]}">
-            <label for="${inputName}">${answersArray[i]}</label><br>
+            `<input type="radio" name="${inputName}" value="${answersData[i]}">
+            <label for="${inputName}">${answersData[i]}</label><br>
             `
             )
         }
@@ -127,6 +149,11 @@ function fetchAnswers(answersArray, inputName){
     return htmlAnswers;
 }
 
+/**
+ * return the selected answer for a question
+ * @param {String} questionName - name value for an input question
+ * @returns 
+ */
 function returnAnswer(questionName) {
     let answeredQuestions = document.getElementsByName(questionName);
     let answer = "";
@@ -140,9 +167,12 @@ function returnAnswer(questionName) {
     return answer;
 }
 
+/**
+ * Called in the Review Modal to show the user what answers they selected in the quiz
+ * relies on returnAnswer() function to handle the fetching of the selected answers to build the Modal's HTML
+ */
 function showAnswers(){
     const message = document.getElementById("answers");
-    // clear the answer message
     message.innerHTML = "";
     for (i in radioQuestions){
         if (radioQuestions.hasOwnProperty(i)){
@@ -157,9 +187,12 @@ function showAnswers(){
     
 }
 
-// display quiz right away
-buildQuestions();
 
+
+/**
+ * Questions are built before the global controls and slide show is generated.
+ */
+buildQuestions();
 const previous = document.getElementById("previous");
 const next = document.getElementById("next");
 const review = document.getElementById("review");
@@ -169,8 +202,16 @@ const closeReview = document.getElementById("close");
 const span = document.getElementsByClassName("close-request")[0];
 const modal = document.getElementById("review-modal");
 
+// set inital slide page to the first question
 let currentSlide = 0;
 
+/**
+ * slide deck control managment
+ * No previous if on first page
+ * No next if on last page
+ * Only show review and submit when on the last page
+ * @param {Integer} n - slide number
+ */
 function showSlide(n) {
     slides[currentSlide].classList.remove("active-slide");
     slides[n].classList.add("active-slide");
@@ -193,25 +234,45 @@ function showSlide(n) {
     }
 }
 
+/**
+ * increment the the slide show page by 1
+ * called on the next button on index
+ */
 function showNextSlide() {
     showSlide(currentSlide + 1);
 }
 
+/**
+ * decrease the slide show page by 1
+ * called by the previous button on index
+ */
 function showPreviousSlide() {
     showSlide(currentSlide - 1);
 }
 
+/**
+ * Launch review answers modal
+ * displays outpout of showAnswers()
+ * called by review button on index
+ */
 function reviewAnswers() {
     const modal = document.getElementById("review-modal");
     modal.style.display = "block";
     showAnswers();
 }
 
+/**
+ * Hide modal content
+ * called by close button and span of times in modal content and click outside of modal content
+ */
 function closeModal() {
     modal.style.display = "none";
 }
 
-// When the user clicks anywhere outside of the open modal, close it
+/**
+ * Event handler to hide modal content when modal is clicked, relies on closeModal() for the action
+ * @event document#mouseclick 
+ */
 window.onclick = function(event) {
   if (event.target == modal) {
     closeModal();
@@ -219,14 +280,14 @@ window.onclick = function(event) {
 };
 
 
+// display current slide
 showSlide(currentSlide);
 
+// event listeners once all content is loaded
 submit.addEventListener('click', showAnswers);
 previous.addEventListener("click", showPreviousSlide);
 next.addEventListener("click", showNextSlide);
 review.addEventListener("click", reviewAnswers);
 closeReview.addEventListener("click", closeModal);
-
-
 // When the user clicks on <span> (x), close the modal
 span.addEventListener("click", closeModal);
