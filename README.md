@@ -183,3 +183,36 @@ HTML, CSS and JavaScript were used to create this website.
 [Am I Responsive?](https://ui.dev/amiresponsive) - prototyping website image on a range of devices.
 
 [Google DNS](https://developers.google.com/speed/public-dns) - hosting name resolution
+
+## Features
+
+> YOU ARE HERE
+Description
+
++ index.html
+  + Feature 1.
+    + User Stories Covered: X
+      + Feature 1 Screenshot 1. <br> ![mobile modal view](docs/images/feature-order-form-mobile.png)
+      + Feature 1 Screenshot 2. <br> ![larger screen modal view](docs/images/feature-order-form.png)
+  
+  + Feature 2.
+    + User Stories Covered: X
+      + Feature 2 Screenshot 1. <br> ![mobile modal view](docs/images/feature-order-form-mobile.png)
+      + Feature 2 Screenshot 2. <br> ![larger screen modal view](docs/images/feature-order-form.png)
+
+  + Feature 3.
+    + User Stories Covered: X
+      + Feature 3 Screenshot 1. <br> ![mobile modal view](docs/images/feature-order-form-mobile.png)
+      + Feature 3 Screenshot 2. <br> ![larger screen modal view](docs/images/feature-order-form.png)
+
+ 
++ 404.html
+
+  + Leverages the github pages jekyll engine to provide a custom 404 experience for users and return users back to the site if they end up in a non-existent child domain.
+    + Styling here is inline as any http calls to child directories cannot be reliably referneced by links in the header, specifically users could manually input non-existing child directories into the url bar and would not see the styling.
+    + Similarly the link back to the home page needs to directly reference the home url [https://bovinehero.com/new-server-order-quiz/index.html](https://bovinehero.com/new-server-order-quiz/index.html) as relative referencing will not guarantee a return to the home page if non-existent child directories are inputted into the url.
+    + I also included some Javascript here to simulate the server talking to the user as an Easter Egg feature
+    + User Stories Covered: 6
+    + Link back home: <br> ![return to the home page](docs/images/feature-404.png)
+
+> TODO: docs/images/feature-404.png, 
