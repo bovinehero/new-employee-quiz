@@ -85,18 +85,25 @@
         setTimeout(writeCodeLine(lineNumber, codeLine), timing)
       }
       function writeCodeLine(lineNumber, codeLine) {
-        // let i = 0;
-        let i = codeLine.length;
+        let i = 0;
+        // let i = 4; // gives 4 chrs in - works!
+        // let i = codeLine.length; // gives full expected code!
         console.log(document.getElementsByTagName("code")[lineNumber].innerHTML = codeLine.slice(0, i) + "|I am a cursor>");
         console.log(lineNumber, codeLine)
-        if (i == codeLine.length) {
+        let seInt = setInterval(function () {
+          i++;
+          if (i == codeLine.length) {
+            i++;  
+            clearInterval(seInt);
             console.log("entire line is written")
             document.getElementsByTagName("code")[lineNumber].innerHTML = codeLine + "helllooooo";
           }
+        }, 10)
+        
 
         
       }
-      typeInConsole(0, 20000);
+      typeInConsole(0, 2000);
     </script>
 </body>
 </html>
