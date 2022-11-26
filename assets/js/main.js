@@ -279,7 +279,6 @@ window.onclick = function(event) {
   }
 };
 
-
 // display current slide
 showSlide(currentSlide);
 
