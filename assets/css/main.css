@@ -88,10 +88,15 @@ button {
     text-decoration: none;
 }
 
-#submit, #next, #previous, #review, #close {
+#submit, #next, #previous, #review, #close, #close-help {
     background: var(--main-color);
     color: var(--main-pair-color);
     float: right;
+}
+
+#order-helper {
+    background: var(--main-pair-color);
+    color: var(--main-color);
 }
 
 .modal {
