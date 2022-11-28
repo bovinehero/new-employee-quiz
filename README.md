@@ -7,10 +7,6 @@
 [Live Site](https://bovinehero.com/vm-order-generator/index.html) is hosted on github pages with a custom DNS CNAME provided by Google DNS.
 
 
-Code TODOs: 
-> TODO create instructions workflow
-> TODO create contact me workflow
-
 ## Table of Contents
 
 1. [Project Goals](#project-goals)
