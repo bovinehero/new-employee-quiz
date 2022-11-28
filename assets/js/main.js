@@ -178,9 +178,9 @@ function showAnswers(){
         if (radioQuestions.hasOwnProperty(i)){
             let selectedAnswer = returnAnswer(radioQuestions[i]['inputValue']);
             if (selectedAnswer){
-                message.innerHTML += `Q: ${radioQuestions[i]['question']}:<br>A: ${selectedAnswer}<br>`;
+                message.innerHTML += `<li>Q: ${radioQuestions[i]['question']}:<br>A: ${selectedAnswer}</li>`;
             } else {
-                message.innerHTML += `OOPS looks like you didn't answer: ${radioQuestions[i]['question']}.<br>`;
+                message.innerHTML += `<li>OOPS looks like you didn't answer: ${radioQuestions[i]['question']}.</li>`;
             }
         }
     }
