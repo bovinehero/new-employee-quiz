@@ -196,11 +196,13 @@ buildQuestions();
 const previous = document.getElementById("previous");
 const next = document.getElementById("next");
 const review = document.getElementById("review");
+const helper = document.getElementById("order-helper");
 const slides = document.querySelectorAll(".question-slide");
 const message = document.getElementById("answers");
 const closeReview = document.getElementById("close");
 const span = document.getElementsByClassName("close-request")[0];
 const modal = document.getElementById("review-modal");
+const help = document.getElementById("help-modal");
 
 // set inital slide page to the first question
 let currentSlide = 0;
@@ -261,6 +263,16 @@ function reviewAnswers() {
     showAnswers();
 }
 
+
+/**
+ * Launch Help modal
+ * called by help icon button on index
+ */
+ function launchHelp() {
+    const help = document.getElementById("help-modal");
+    help.style.display = "block";
+}
+
 /**
  * Hide modal content
  * called by close button and span of times in modal content and click outside of modal content
@@ -287,6 +299,7 @@ submit.addEventListener('click', showAnswers);
 previous.addEventListener("click", showPreviousSlide);
 next.addEventListener("click", showNextSlide);
 review.addEventListener("click", reviewAnswers);
+helper.addEventListener("click",launchHelp);
 closeReview.addEventListener("click", closeModal);
 // When the user clicks on <span> (x), close the modal
 span.addEventListener("click", closeModal);
