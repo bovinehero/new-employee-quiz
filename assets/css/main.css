@@ -95,8 +95,8 @@ button {
 }
 
 #order-helper {
-    background: var(--main-pair-color);
-    color: var(--main-color);
+    background: var(--main-color);
+    color: var(--main-pair-color);
     font-size: 28px;
     font-weight: bold;
 }
