@@ -127,7 +127,7 @@ button {
     justify-content: space-between;
 }
 
-.close-request{
+.close-request, .help-me {
     color: var(--main-color);
     font-size: 28px;
     font-weight: bold;
