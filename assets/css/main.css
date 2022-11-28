@@ -97,6 +97,8 @@ button {
 #order-helper {
     background: var(--main-pair-color);
     color: var(--main-color);
+    font-size: 28px;
+    font-weight: bold;
 }
 
 .modal {
@@ -132,7 +134,7 @@ button {
     justify-content: space-between;
 }
 
-.close-request, .help-me {
+.close-modal {
     color: var(--main-color);
     font-size: 28px;
     font-weight: bold;
@@ -142,7 +144,7 @@ button {
     order: 2;
 }
 
-.close-request:hover, .close-request:focus {
+.close-modal:hover, .close-modal:focus {
     color: var(--main-color);
     text-decoration: none;
 }

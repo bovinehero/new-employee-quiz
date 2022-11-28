@@ -200,7 +200,9 @@ const helper = document.getElementById("order-helper");
 const slides = document.querySelectorAll(".question-slide");
 const message = document.getElementById("answers");
 const closeReview = document.getElementById("close");
-const span = document.getElementsByClassName("close-request")[0];
+const closeHelp = document.getElementById("close-help");
+const span = document.getElementsByClassName("close-modal")[0];
+const span2 = document.getElementsByClassName("close-modal")[1];
 const modal = document.getElementById("review-modal");
 const help = document.getElementById("help-modal");
 
@@ -279,6 +281,7 @@ function reviewAnswers() {
  */
 function closeModal() {
     modal.style.display = "none";
+    help.style.display = "none";
 }
 
 /**
@@ -286,7 +289,7 @@ function closeModal() {
  * @event document#mouseclick 
  */
 window.onclick = function(event) {
-  if (event.target == modal) {
+  if (event.target == modal || event.target == help) {
     closeModal();
   }
 };
@@ -301,5 +304,7 @@ next.addEventListener("click", showNextSlide);
 review.addEventListener("click", reviewAnswers);
 helper.addEventListener("click",launchHelp);
 closeReview.addEventListener("click", closeModal);
+closeHelp.addEventListener("click", closeModal);
 // When the user clicks on <span> (x), close the modal
 span.addEventListener("click", closeModal);
+span2.addEventListener("click", closeModal);
