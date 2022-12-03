@@ -108,7 +108,7 @@ let submit = document.getElementById('submit');
 function buildQuestions(){
     for (let i in radioQuestions) {
         if (radioQuestions.hasOwnProperty(i)) {
-            let question = radioQuestions[i]['question']
+            let question = radioQuestions[i]['question'];
             let answers = fetchAnswers(radioQuestions[i]['answers'], radioQuestions[i]['inputValue']).join('');
             questions.push(
                 `
@@ -117,7 +117,7 @@ function buildQuestions(){
                     ${answers}
                 </div>
                 `
-            )
+            );
         }
     }
     questionsContainer.innerHTML = questions.join('');
@@ -130,21 +130,21 @@ function buildQuestions(){
  * @returns 
  */
 function fetchAnswers(answersData, inputName){
-    let htmlAnswers = []
+    let htmlAnswers = [];
     for (let i in answersData) {
         if (answersData.hasOwnProperty(i)) {
             htmlAnswers.push(
             `<input type="radio" id="${inputName}" name="${inputName}" value="${answersData[i]}">
             <label for="${inputName}">${answersData[i]}</label><br>
             `
-            )
+            );
         }
     }
     htmlAnswers.push(
         `<input type="radio" id="none" name="${inputName}" value="not answered" checked>
         <label for="none">None Selected</label><br>
         `
-    )
+    );
     return htmlAnswers;
 }
 
