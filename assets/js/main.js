@@ -141,7 +141,7 @@ function fetchAnswers(answersData, inputName){
         }
     }
     htmlAnswers.push(
-        `<input type="radio" id="none" name="${inputName}" value="none" checked>
+        `<input type="radio" id="${inputName}-none" name="${inputName}" value="none" checked>
         <label for="${inputName}-none">None Selected</label><br>
         `
     );
