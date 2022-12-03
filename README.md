@@ -210,3 +210,81 @@ Description
     + I also included some Javascript here to simulate the server talking to the user as an Easter Egg feature
     + User Stories Covered: 6
     + Link back home: <br> ![return to the home page](docs/images/feature-404.png)
+
+### Future Implementations
+
++ Upstream Database system and API to make the available configurations call more real time.
++ Downstream API integration to place the order request into a work queue
++ The backend form validation, as the form control is implemented only on client side technologies a tech savvy user could bypass these and post direct to the form endpoint without declaring values for all the inputs.
+
+### Accessibility Features
+I have been mindful during coding to ensure that the website is as accessible friendly as possible. I have achieved this by:
+
++ Using semantic HTML.
++ Ensuring that there is a sufficient colour contrast throughout the site.
+
+## Testing
+
+### HTML Validation
+
+The W3C Markup Validation Service was used to validate the HTML of the website. 
+
+index.html [results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fbovinehero.com%2Fnew-server-order-quiz%2Findex.html) - No Errors or Warnings Found
+
+### CSS Validation
+
+The W3C Jigsaw CSS Validation Service was used to validate the CSS of the website.
+
+site [results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fbovinehero.com%2Fnew-server-order-quiz%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) - No Errors or Warnings Found
+
+### JavaScript Validation
+
+The JSHint Plugin was used to validate the JavaScript of the website.
+
+![JSHint summary image for JavaScript Code page](docs/images/testing-jshint.png)
+
+No Errors or Warnings Found
+
+### Accessibility
+
+The WAVE WebAIM web accessibility evaluation tool was used to ensure the website met high accessibility standards.
+
++ index.html [results](https://wave.webaim.org/report#/https://bovinehero.com/new-server-order-quiz/index.html)
+
+
+#### Errors
+
+No Accessibility Errors on site
+
+#### Alerts
+
+1 Accessibility Alert discovered on site:
+
++ A `<noscript>` element is present. Not an issue as the content within `<noscript>` is a simple paragraph styled the same way as the text below.
+
+### Performance
+
+Performance testing was performed on lighthouse in Google Chrome's DevTools
+
+#### index.html
+
+![lighthouse summary image for index page](docs/images/lighthouse-index.png)
+
+
+No Issues Reported
+
+### Device testing
+The website was tested on the following devices:
+
+1. MacBook Pro
+2. IPhone 13
+3. In addition, the website was tested using Google Chrome Developer Tools Device emulation for all available device options plus a custom setting for IPhone 5
+
+
+### Browser Compatibility
+The website was tested on the following browsers:
+
+1. Google Chrome
+2. Mozilla Firefox
+
+### Testing user stories
