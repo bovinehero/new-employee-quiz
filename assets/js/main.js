@@ -134,15 +134,15 @@ function fetchAnswers(answersData, inputName){
     for (let i in answersData) {
         if (answersData.hasOwnProperty(i)) {
             htmlAnswers.push(
-            `<input type="radio" id="${inputName}" name="${inputName}" value="${answersData[i]}">
-            <label for="${answersData[i]}">${answersData[i]}</label><br>
+            `<input type="radio" id="${inputName}-${answersData[i]}" name="${inputName}" value="${answersData[i]}">
+            <label for="${inputName}-${answersData[i]}">${answersData[i]}</label><br>
             `
             );
         }
     }
     htmlAnswers.push(
         `<input type="radio" id="none" name="${inputName}" value="none" checked>
-        <label for="none">None Selected</label><br>
+        <label for="${inputName}-none">None Selected</label><br>
         `
     );
     return htmlAnswers;
