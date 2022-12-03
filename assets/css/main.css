@@ -100,6 +100,18 @@ button {
     text-decoration: none;
 }
 
+input[type=submit] {
+    /* for no js workflow */
+    color: var(--main-pair-color);
+    background-color:var(--main-color);
+    border: none;
+    margin: 4px 2px;
+    padding: 4px 8px;
+    text-decoration: none;
+    float: right;
+    cursor: pointer;
+}
+
 #submit, #next, #previous, #review, #close, #close-help {
     background: var(--main-color);
     color: var(--main-pair-color);

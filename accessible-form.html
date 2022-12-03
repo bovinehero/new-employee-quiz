@@ -24,7 +24,7 @@
                 <p><b>NOTE:</b> All systems come with a minimal OS drive with infra tools installed</p>
                 <p>Backups are only available in the Production Environment.</p>
                 <div id="accessible-questions">
-
+                    <br>
                     <p>How many CPUs are required?</p>
                     <input type="radio" id="cpu" name="cpu" value="1">
                     <label for="1">1</label><br>
@@ -36,7 +36,7 @@
                     <label for="8">8</label><br>
                     <input type="radio" id="none" name="cpu" value="none" checked="">
                     <label for="none">None Selected</label><br>
-
+                    <br>
                     <p>How many GBs of Memory?</p>
                     <input type="radio" id="mem" name="mem" value="1">
                     <label for="1">1</label><br>
@@ -56,7 +56,7 @@
                     <label for="128">128</label><br>
                     <input type="radio" id="none" name="mem" value="none" checked="">
                     <label for="none">None Selected</label><br>
-                
+                    <br>
                     <p>What Additional Data Disk Size is Required?</p>
                     <input type="radio" id="datad" name="datad" value="20">
                     <label for="20">20</label><br>
@@ -76,7 +76,7 @@
                     <label for="960">960</label><br>
                     <input type="radio" id="none" name="datad" value="none" checked="">
                     <label for="none">None Selected</label><br>
-
+                    <br>
                     <p>What Location is Needed?</p>
                     <input type="radio" id="location" name="location" value="US West (Oregon)">
                     <label for="US West (Oregon)">US West (Oregon)</label><br>
@@ -96,7 +96,7 @@
                     <label for="Asia Pacific (Seoul)">Asia Pacific (Seoul)</label><br>
                     <input type="radio" id="none" name="location" value="none" checked="">
                     <label for="none">None Selected</label><br>
-
+                    <br>
                     <p>What Environment is being deployed to?</p>
                     <input type="radio" id="env" name="env" value="Production">
                     <label for="Production">Production</label><br>
@@ -110,7 +110,7 @@
                     <label for="External">External</label><br>
                     <input type="radio" id="none" name="env" value="none" checked="">
                     <label for="none">None Selected</label><br>
-                    
+                    <br>            
                     <p>What Operating System should be installed?</p>
                     <input type="radio" id="osType" name="osType" value="Windows Server 2019">
                     <label for="Windows Server 2019">Windows Server 2019</label><br>
@@ -128,14 +128,17 @@
                     <label for="BSD: Firewall">BSD: Firewall</label><br>
                     <input type="radio" id="none" name="osType" value="none" checked="">
                     <label for="none">None Selected</label><br>
-                    
-                    <input type="submit" value="Submit">
+                    <br>                   
                 </div>
-                <p>For Additional/Custom requirements contact the infra the Infra Team:</p>
+                <div>
+                    <br>
+                    <p>For Additional/Custom requirements contact the infra the Infra Team:</p>
                     <ul>
                         <li><a class="email-link" href="mailto:webmaster@bovinehero.com" aria-label="Email the Bovine Hero's Webmaster"><i class="fa-regular fa-envelope"></i> Email</a></li>
                         <li><a class="slack-link" href="https://slack.com/intl/en-gb/features/channels" aria-label="Connect to the Hero slack channel" target="_blank"><i class="fa-brands fa-slack"></i> Slack</a></li>
                     </ul>
+                    <input type="submit" value="Submit">
+                </div>
             </form>
         </div>
         <div class="quiz-footer">
