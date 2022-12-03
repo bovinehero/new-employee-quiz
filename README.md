@@ -136,7 +136,7 @@ Wireframes were created on desktop for a mobile first approach was initially con
 </details>
 <br>
 
-The landing page is the same design for all screen sizes, but is allowed to expand down if the information volume in the text box requires it. On larger screen sizes the fonts and buttons chacng size to use more of the screen real estate via media queries.
+The landing page is the same design for all screen sizes, but is allowed to expand down if the information volume in the text box requires it. On larger screen sizes the fonts and buttons change size to use more of the screen real estate via media queries.
 
 ## Technologies Used
 
@@ -210,5 +210,3 @@ Description
     + I also included some Javascript here to simulate the server talking to the user as an Easter Egg feature
     + User Stories Covered: 6
     + Link back home: <br> ![return to the home page](docs/images/feature-404.png)
-
-> TODO: docs/images/feature-404.png, 
