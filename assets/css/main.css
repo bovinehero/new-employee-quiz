@@ -27,7 +27,7 @@ body {
     background: var(--main-color);
 }
 
-ol li {
+ol li, ul li {
     padding: 5px;
     margin-left: 35px;
 }
@@ -42,7 +42,7 @@ ol li {
     cursor: pointer;
 }
 
-p a {
+a {
     color: var(--main-color);
     text-decoration: none;
     cursor: pointer;
@@ -187,7 +187,7 @@ input[type=radio] {
         padding-top: 1rem;
     }
 
-    p, ol li {
+    p, ol li, ul li {
         font-size: 1.5rem;
         padding-bottom: 1rem;
     }
