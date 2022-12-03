@@ -17,7 +17,7 @@
     </header>
     <section class="quiz-window">
         <div class="quiz-header">
-            <h2>VM Request <button type="button" id="order-helper"><i class="fa-regular fa-circle-question"></i> <small>Help</small></button></h2>
+            <h2>VM Request <button type="button" id="order-helper" aria-label="Help"><i class="fa-regular fa-circle-question"></i></button></h2>
         </div>
         <div class="quiz-description-wrapper">
             <form method="post" action="https://formdump.codeinstitute.net/">
@@ -37,7 +37,7 @@
             <div class="modal" id="help-modal">
                 <div class="modal-content">
                     <div>
-                        <span class="close-modal">&times;</span>
+                        <span aria-label="close help" class="close-modal">&times;</span>
                     </div>
                     <div id="help-content">
                         <p>Answer the questions in order to specify the following attributes for your new VM:</p>
@@ -58,20 +58,20 @@
                         </ul>
 
                     </div>
-                    <button id="close-help">Close</button>
+                    <button aria-label="close help" id="close-help">Close</button>
                 </div>
             </div>
             <div class="modal" id="review-modal">
                 <div class="modal-content">
                     <div>
-                        <span class="close-modal">&times;</span>
+                        <span aria-label="close answer review" class="close-modal">&times;</span>
                     </div>
                     <div id="answers-wrapper">
                         <ol id="answers">
                             
                         </ol>
                     </div>
-                    <button id="close">Close</button>
+                    <button aria-label="close answer review" id="close">Close</button>
                 </div>
             </div>
         </div>
