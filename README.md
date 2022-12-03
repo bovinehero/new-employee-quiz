@@ -3,6 +3,7 @@
 
 ![Mockup image](docs/images/git-header.png)
 > TODO: get from amiresponsive
+> TODO: move the nojs workflow into the noscript
 
 [Live Site](https://bovinehero.com/vm-order-generator/index.html) is hosted on github pages with a custom DNS CNAME provided by Google DNS.
 
@@ -250,6 +251,8 @@ No Errors or Warnings Found
 The WAVE WebAIM web accessibility evaluation tool was used to ensure the website met high accessibility standards.
 
 + index.html [results](https://wave.webaim.org/report#/https://bovinehero.com/new-server-order-quiz/index.html)
+
+TODO: look at this
 
 
 #### Errors
