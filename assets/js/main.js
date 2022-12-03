@@ -134,8 +134,8 @@ function fetchAnswers(answersData, inputName){
     for (let i in answersData) {
         if (answersData.hasOwnProperty(i)) {
             htmlAnswers.push(
-            `<input type="radio" id="${inputName}-${answersData[i].replace(/\s/g, '_')}" name="${inputName}" value="${answersData[i]}">
-            <label for="${inputName}-${answersData[i].replace(/\s/g, '_')}">${answersData[i]}</label><br>
+            `<input type="radio" id="${inputName}-${answersData[i].replace(/\s/g, '-')}" name="${inputName}" value="${answersData[i]}">
+            <label for="${inputName}-${answersData[i].replace(/\s/g, '-')}">${answersData[i]}</label><br>
             `
             );
         }
