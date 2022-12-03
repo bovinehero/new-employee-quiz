@@ -99,7 +99,6 @@ const radioQuestions = [
 
 // define the DOM elements to set up the quiz area
 let questionsContainer = document.getElementById('questions');
-let answersContainer = document.getElementById('answers');
 let submit = document.getElementById('submit');
 
 /**
@@ -172,9 +171,8 @@ function returnAnswer(questionName) {
  * relies on returnAnswer() function to handle the fetching of the selected answers to build the Modal's HTML
  */
 function showAnswers(){
-    const message = document.getElementById("answers");
     message.innerHTML = "";
-    for (i in radioQuestions){
+    for (let i in radioQuestions){
         if (radioQuestions.hasOwnProperty(i)){
             let selectedAnswer = returnAnswer(radioQuestions[i]['inputValue']);
             if (selectedAnswer){
