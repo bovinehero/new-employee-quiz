@@ -108,8 +108,8 @@ let submit = document.getElementById('submit');
 function buildQuestions(){
     for (let i in radioQuestions) {
         if (radioQuestions.hasOwnProperty(i)) {
-            let question = radioQuestions[i]['question'];
-            let answers = fetchAnswers(radioQuestions[i]['answers'], radioQuestions[i]['inputValue']).join('');
+            let question = radioQuestions[i].question;
+            let answers = fetchAnswers(radioQuestions[i].answers, radioQuestions[i].inputValue).join('');
             questions.push(
                 `
                 <div class="question-slide">
@@ -174,18 +174,16 @@ function showAnswers(){
     message.innerHTML = "";
     for (let i in radioQuestions){
         if (radioQuestions.hasOwnProperty(i)){
-            let selectedAnswer = returnAnswer(radioQuestions[i]['inputValue']);
+            let selectedAnswer = returnAnswer(radioQuestions[i].inputValue);
             if (selectedAnswer){
-                message.innerHTML += `<li>Q: ${radioQuestions[i]['question']}:<br>A: ${selectedAnswer}</li>`;
+                message.innerHTML += `<li>Q: ${radioQuestions[i].question}:<br>A: ${selectedAnswer}</li>`;
             } else {
-                message.innerHTML += `<li>OOPS looks like you didn't answer: ${radioQuestions[i]['question']}.</li>`;
+                message.innerHTML += `<li>OOPS looks like you didn't answer: ${radioQuestions[i].question}.</li>`;
             }
         }
     }
     
 }
-
-
 
 /**
  * Questions are built before the global controls and slide show is generated.
