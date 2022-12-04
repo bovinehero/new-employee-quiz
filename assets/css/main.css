@@ -51,6 +51,8 @@ a {
 .quiz-window {
     padding: 1rem;
     height: 90vh;
+    width: 80vh;
+    margin: auto;
 }
 
 .quiz-header {
@@ -192,73 +194,10 @@ label {
 input[type=radio] {
     accent-color: var(--main-color);
 }
-/* 
-@media screen and (min-width: 480px) {
-    .quiz-description-wrapper {
-        background: var(--main-pair-color);
-        padding: 4rem;
-    }
-    h1 {
-        font-size: 3rem;
-    }
 
-    h2 {
-        font-size: 2rem;
-        padding-top: 1rem;
-    }
-
-    p, ol li, ul li {
-        font-size: 1.5rem;
-        padding-bottom: 1rem;
-    }
-
-    input[type=radio]{
-        margin-bottom: 1.5rem;
-    }
-
-    label {
-        margin: 1rem;
+@media screen and ( min-height: 480px ) {
+    /* move up the buttons when screen is vertical and not small */
+    #question-form {
+        height: 60vh;
     }
 }
-
-@media screen and (min-width: 520px) {
-    .quiz-window {
-        width: 70%;
-        margin: auto;
-    }
-
-    button {
-        margin: 16px 8px;
-        padding: 8px 16px;
-    }
-
-    input[type=submit] {
-        margin: 16px 8px;
-        padding: 8px 16px;
-    }
-}
-
-
-@media screen and (min-width: 600px) {
-    button {
-        margin: 16px 8px;
-        padding: 16px 24px;
-        font-size: large;
-    }
-
-    input[type=submit] {
-        margin: 16px 8px;
-        padding: 16px 24px;
-        font-size: large;
-    }
-}
-
-@media screen and (min-width: 840px) {
-    button {
-        margin: 32px 16px;
-    }
-
-    input[type=submit] {
-        margin: 32px 16px;
-    }
-} */
