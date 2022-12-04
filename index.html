@@ -26,7 +26,6 @@
             <h2>VM Request <button type="button" id="order-helper" aria-label="Help"><i class="fa-regular fa-circle-question"></i></button></h2>
         </div>
         <div class="quiz-description-wrapper">
-            <form method="post" action="https://formdump.codeinstitute.net/">
             <div class="quiz-description">
                 <noscript>
                     <p>Please enable JavaScript in your browser to use the inteactive version of this website.</p>
@@ -150,14 +149,17 @@
                         </div>
                     </form>
                 </noscript>
-                <div id="questions">
-                </div>
-            </div>
-            <button type="button" id="review">Review!</button>
-            <button type="button" id="next">Next &raquo;</button>
-            <button type="button" id="previous">&laquo; Previous</button>
-            <button id="submit">Submit</button>
-            </form>         
+                <form method="post" action="https://formdump.codeinstitute.net/">
+                    <div id="questions">
+                    </div>
+                    <div>
+                        <button type="button" id="review">Review!</button>
+                        <button type="button" id="next">Next &raquo;</button>
+                        <button type="button" id="previous">&laquo; Previous</button>
+                        <button id="submit">Submit</button>
+                    </div>
+                </form>    
+            </div>     
         </div>
         <div class="quiz-footer">
             <div class="modal" id="help-modal">
