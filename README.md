@@ -48,7 +48,8 @@
 ## Project Goals 
 
 One of the big issues I face as an infrastructure engineer is the way in which people request new virtual machines, I never get all the details I need on the initial request and there tends to be some back and forth which wastes everyone's time.
-This project endevours to simulate the process of requesting a new Virtual Machine (VM) from the Infrastructure team. 
+
+Thus this project endevours to simulate the process of requesting a new Virtual Machine (VM) from the Infrastructure team. 
 
 ### User Goals
 + Should be able to order a new VM based on the offerings available
@@ -92,7 +93,7 @@ This project endevours to simulate the process of requesting a new Virtual Machi
 
 Due to the JavaScript requirement this site really needed to be a single page app, and by virtue the requirement boiled down to a web form best practice dictates a simplistic approach.
 
-With this in mind I decided to implement a simple landing page with text instructions and a button to launch a web form.
+With this in mind I initally considered a simple landing page with text instructions and a button to launch a web form. While this design would have easily met the brief it did not provide ample oppertunity to explore a significantjavascript implementation. In order to provide a more inteactive experience I settled on implementing a javascript generated "slideshow" format for the questions.
 
 ### Colour
 
@@ -114,12 +115,15 @@ Google Fonts was used for the following fonts:
 
 ### Imagery
 
-As the app is an order form, no images were used in this site to keep the workflow simple.
+As the app is an order form, no images were used in this site to keep the workflow simple however font awesome icongraphy was implemented for the help, slack and email functionality.
 
 ### Structure
 
 The website consists of a single page, presented to the user as a slide deck of questions.
-The page is structured in a well known, recognizable, user friendly, and easy to learn way. Upon arriving to the website the user is presented with the first question with familiar navigation buttons.
+
+The question's page is structured in a well known, recognizable, user friendly, and easy to learn way. Upon arriving to the website the user is presented with the first question with familiar navigation buttons. As the intended user is assumed to be familiar with the concepts of Virtual Machines and the deployment environments in the company no effort is made to explain this in the quiz workflow.
+
+The functionality of the order quiz has been replicated wihout the use of JavaScript (purely HTML and CSS) in a `<noscript>` tag.
 
 Additionally there is a 404 page included that will return the website user to the home page.
 
