@@ -195,24 +195,27 @@ Description
     + User Stories Covered: 8
       + Order form loaded with no JavaScript  <br> ![mobile modal view](docs/images/feature-order-form-no-js.png)
   
-  + Feature 1.
-    + User Stories Covered: X
-      + Feature 1 Screenshot 1. <br> ![mobile modal view](docs/images/feature-order-form-mobile.png)
-      + Feature 1 Screenshot 2. <br> ![larger screen modal view](docs/images/feature-order-form.png)
+  + A slideshow style set of radio questions to allow users to specify VM criteria based on available Hardware, Operating System, Environment and Location options. This feature includes navigation buttons to traverse through questions and then a submit button appears on the last question page. All of the content is genererated within JavaScript. - the review quesions functionality is covered below in the Review Modal Feature.
+    + User Stories Covered: 1, 2, 3 & 6
+      + Slideshow Page 1 CPU<br> ![specify cpu](docs/images/feature-slideshow-page1.png)
+      + Slideshow Page 2 Memory<br> ![specify memory](docs/images/feature-slideshow-page2.png)
+      + Slideshow Page 3 Data Disk<br> ![specify data disk](docs/images/feature-slideshow-page3.png)
+      + Slideshow Page 4 Location<br> ![specify location](docs/images/feature-slideshow-page4.png)
+      + Slideshow Page 5 Environment<br> ![specify environment](docs/images/feature-slideshow-page5.png)
+      + Slideshow Page 6 Operating System<br> ![specify OS](docs/images/feature-slideshow-page6.png)
   
-  + Feature 2.
-    + User Stories Covered: X
-      + Feature 2 Screenshot 1. <br> ![mobile modal view](docs/images/feature-order-form-mobile.png)
-      + Feature 2 Screenshot 2. <br> ![larger screen modal view](docs/images/feature-order-form.png)
-
-  + Feature 3.
-    + User Stories Covered: X
-      + Feature 3 Screenshot 1. <br> ![mobile modal view](docs/images/feature-order-form-mobile.png)
-      + Feature 3 Screenshot 2. <br> ![larger screen modal view](docs/images/feature-order-form.png)
-
+  + A Review Modal populated by the answers a user selects in the slideshow questions. This can then be reviewed and changed as required, the submit functionality on the button takes the __selected__ radio answer to submit downstream. 
+    + User Stories Covered: 4
+      + Slideshow Final page with Review Button<br> ![slideshow last page](docs/images/feature-slideshow-page6.png)
+      + Open Review Modal <br> ![Answers Review](docs/images/feature-review-modal.png)
+ 
+  + A Help Modal launched by the question mark icon (button) which explains what to fill out and who to contact should there be issues or custome requirments not met by the order form.
+    + User Stories Covered: 5 & 7
+      + Slideshow Final page with Help Iconn<br> ![specify cpu](docs/images/feature-slideshow-page1.png)
+      + Open Help Modal <br> ![Help Content](docs/images/feature-help-modal.png)
+      + Contacts Message in Help Modal <br> ![Contacts message with code](docs/images/feature-contact-message-and-code.png)
  
 + 404.html
-
   + Leverages the github pages jekyll engine to provide a custom 404 experience for users and return users back to the site if they end up in a non-existent child domain.
     + Styling here is inline as any http calls to child directories cannot be reliably referneced by links in the header, specifically users could manually input non-existing child directories into the url bar and would not see the styling.
     + Similarly the link back to the home page needs to directly reference the home url [https://bovinehero.com/new-server-order-quiz/index.html](https://bovinehero.com/new-server-order-quiz/index.html) as relative referencing will not guarantee a return to the home page if non-existent child directories are inputted into the url.
@@ -231,6 +234,7 @@ I have been mindful during coding to ensure that the website is as accessible fr
 
 + Using semantic HTML.
 + Ensuring that there is a sufficient colour contrast throughout the site.
++ Implementing a no javascript fallback option in the order form
 
 ## Testing
 
@@ -274,7 +278,7 @@ Performance testing was performed on lighthouse in Google Chrome's DevTools
 
 No significant issues reported
 
-Issues:
+Issues Reported:
 
 | **Section** | **Feature** |**Issue Description** | **Comment** |
 |-------------|-------------|----------------------|-------------|
@@ -295,6 +299,35 @@ The website was tested on the following browsers:
 2. Mozilla Firefox
 
 ### Testing user stories
+
+
+#### Employee
+1. As a __Site User__, I would like to raise an order for a new VM.
+
+2. As a __Site User__, I would like to select different hardware specifications (OS, CPU, Disk sizes etc) for my VM.
+
+3. As a __Site User__, I would like to specify the physical and logical environments for the VM's deployment.
+
+4. As a __Site User__, I would like to review my answers before submission and be able to change the answers to questions before submission.
+
+
+5. As a __Site User__, I should be able to contact support if there are any issues or quries I might have.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Help Modal | TBD | TBD | TBD |
+
+
+6. As a __Site User__, I would like to be able to easily navigate between questions.
+
+
+### Client (Site Owner) Stories
+7. As the __Site Owner__, I want users to be able to contact us for custom requests or issues.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Help Modal | TBD | TBD | TBD |
+
 
 
 8. As the __Site Owner__, I want users without Javascript enabled to be able complete an order
