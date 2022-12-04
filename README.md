@@ -187,8 +187,7 @@ HTML, CSS and JavaScript were used to create this website.
 
 ## Features
 
-> YOU ARE HERE
-Description
+The website is comprised of a single page app, a mock response of a downstream api (the CI formdump) and a custom 404 page which which will return the user to the home page should they click on an expired link or otherwise get lost on the site.
 
 + index.html
   + A noscript fallback to html only order form was implemented for accessibility and compatibility in order to ensure users without javascript enabled browsers can still complete an order.
