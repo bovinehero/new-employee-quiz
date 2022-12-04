@@ -3,7 +3,6 @@
 
 ![Mockup image](docs/images/git-header.png)
 > TODO: get from amiresponsive
-> TODO: Fix the slideshow nav
 
 [Live Site](https://bovinehero.com/vm-order-generator/index.html) is hosted on github pages with a custom DNS CNAME provided by Google DNS.
 
@@ -86,6 +85,7 @@ Thus this project endevours to simulate the process of requesting a new Virtual 
 
 ### Client (Site Owner) Stories
 7. As a site owner, I want users to be able to contact us for custom requests or issues.
+8. As a site owner, I want users without Javascript enabled to be able complete an order
 
 ## Design
 
@@ -191,6 +191,10 @@ HTML, CSS and JavaScript were used to create this website.
 Description
 
 + index.html
+  + A noscript fallback to html only order form was implemented for accessibility and compatibility in order to ensure users without javascript enabled browsers can still complete an order.
+    + User Stories Covered: 8
+      + Order form loaded with no JavaScript  <br> ![mobile modal view](docs/images/feature-order-form-no-js.png)
+  
   + Feature 1.
     + User Stories Covered: X
       + Feature 1 Screenshot 1. <br> ![mobile modal view](docs/images/feature-order-form-mobile.png)
@@ -268,8 +272,13 @@ Performance testing was performed on lighthouse in Google Chrome's DevTools
 
 ![lighthouse summary image for index page](docs/images/lighthouse-index.png)
 
+No significant issues reported
 
-No Issues Reported
+Issues:
+
+| **Section** | **Feature** |**Issue Description** | **Comment** |
+|-------------|-------------|----------------------|-------------|
+| Performance | Help Button |  Eliminate render blocking resources | Fontawesome load in of icons causes a small delay (0.26s), not a significant enough impact to refactor |
 
 ### Device testing
 The website was tested on the following devices:
@@ -286,3 +295,10 @@ The website was tested on the following browsers:
 2. Mozilla Firefox
 
 ### Testing user stories
+
+
+8. As the __Site Owner__, I want users without Javascript enabled to be able complete an order
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| noscript fallback content | Visit the site with JavaScript disabled in browser complete the form and hit submit | Data submited via form to downstream API | Works as expected |
