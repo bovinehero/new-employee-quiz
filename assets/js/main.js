@@ -113,8 +113,10 @@ function buildQuestions(){
             questions.push(
                 `
                 <div class="question-slide">
-                    <p>${question}</p>
-                    ${answers}
+                    <fieldset>
+                        <legend><p>${question}</p></legend>
+                        ${answers}
+                    </fieldset>
                 </div>
                 `
             );
