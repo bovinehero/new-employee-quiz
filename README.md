@@ -317,6 +317,16 @@ The website was tested on the following browsers:
 
 4. As a __Site User__, I would like to review my answers before submission.
 
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Review Modal | Progress the order through to the last slide of questions and click on the "Review!" button | Modal opens with currently selected answers to the questions | Works as expected |
+
+<details>
+<summary>Review Modal Results</summary>
+<br>
+<img alt="Review Modal Results" src="docs/images/testing-review-modal.gif">
+</details>
+<br>
 
 5. As a __Site User__, I should be able to see information on how to use that app.
 
@@ -337,7 +347,7 @@ The website was tested on the following browsers:
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| Navigation buttons | Visit the site and use the various next, previous, close, review and submit buttons | Allbutton functionality works as expected to take user to correct question or perform's correct action. | Works as expected |
+| Navigation Buttons | Visit the site and use the various next, previous, close, review and submit buttons | Allbutton functionality works as expected to take user to correct question or perform's correct action. | Works as expected |
 
 Results are the same as user story 1.
 
