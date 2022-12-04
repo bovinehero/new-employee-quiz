@@ -4,12 +4,10 @@
 
 ### TODO List
 1. import the wireframes
-2. Finalise media query styles, Bug hunt and discuss 
-3. amiresponsive
+2. Bug hunt and discuss 
 3. Final Code review and comments
 
 ![Mockup image](docs/images/git-header.png)
-> TODO: get from amiresponsive
 
 [Live Site](https://bovinehero.com/vm-order-generator/index.html) is hosted on github pages with a custom DNS CNAME provided by Google DNS.
 
