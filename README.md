@@ -1,6 +1,16 @@
 # New Server Requisition Order (Quiz)
 (Developer: Gary Grant)
 
+
+### TODO List
+1. import the wireframes
+2. Bug hunt and discuss
+3. test user stories
+4. Finalise media query styles
+
+
+
+
 ![Mockup image](docs/images/git-header.png)
 > TODO: get from amiresponsive
 
@@ -337,8 +347,60 @@ The website was tested on the following browsers:
 
 
 <details>
-<summary>Sign Up Form Results</summary>
+<summary>Order Form Results</summary>
 <br>
-<img alt="Sign Up Form Test Results" src="docs/images/testing-noscript-fallback.gif">
+<img alt="Order Form Test Results" src="docs/images/testing-noscript-fallback.gif">
 </details>
 <br>
+
+
+## Bugs
+
+> TODO: Find and Discuss the Bugs
+
+## Deployment & Local Development
+
+All of the following steps require a logged in github account.
+
+### Deployment
+Github Pages was used to deploy the live website. 
+The instructions to achieve this are available [here](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site)
+
+### How to Fork
+To fork this repository:
+
+1. Go to the repository for this project.
+2. Click the Fork button in the top right corner.
+
+### How to Clone
+To clone this repository:
+
+1. Go to the repository for this project.
+2. Click on the code button, select whether you would like to clone with HTTPS, SSH or GitHub CLI and copy the link shown.
+3. Open the terminal in your code editor and change the current working directory to the location you want to use for the cloned directory.
+4. Type 'git clone' into the terminal and then paste the link you copied in step 3. Press enter.
+
+## Credits
+
+### Code Used
+
+[W3C Schools](https://www.w3schools.com/) for proof of concept attempts
+[css-tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) for a yet another review on flexbox
+[mdm web docs](https://developer.mozilla.org/en-US/docs/Learn) for various CSS, HTML and Javascript information.
+
+### Content
+No borrowed Content in this project
+
+### Media
+No borrowed Media in this project
+
+## Acknowledgments
+I would like to acknowledge the following people who helped me along the way in completing my second CI project:
+
+Ed Bradly - for his insights into JavaScript events
+
+Joesph Smith - for his peer review on the site before submission
+
+Mo Shami - for being the mentor that set me on the right path and provided me with mid and final feedback prioir to submission.
+
+Offensive Security - for the defensive JavaScript advice in my JS for loops.
