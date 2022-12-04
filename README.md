@@ -313,7 +313,19 @@ The website was tested on the following browsers:
 
 2. As a __Site User__, I would like to select different hardware specifications (OS, CPU, Disk sizes etc) for my VM.
 
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Questions Slideshow | Progress the order through the slides to find the desired options, clicking submit to the final page will submit them downstream | Users should be able to select one option from each question and this valus should be submited to formdump | Works as expected |
+
+Results are the same as user story 1.
+
 3. As a __Site User__, I would like to specify the physical and logical environments for the VM's deployment.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Questions Slideshow | Progress the order through the slides to find the desired options, clicking submit to the final page will submit them downstream | Users should be able to select one option from each question and this valus should be submited to formdump | Works as expected |
+
+Results are the same as user story 1.
 
 4. As a __Site User__, I would like to review my answers before submission.
 
@@ -347,10 +359,17 @@ The website was tested on the following browsers:
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| Navigation Buttons | Visit the site and use the various next, previous, close, review and submit buttons | Allbutton functionality works as expected to take user to correct question or perform's correct action. | Works as expected |
+| Navigation Buttons | Visit the site and use the various next, previous, close, review and submit buttons | All button functionality should work as expected to take user to correct question or perform's correct action. | Works as expected |
+| 404 page | Visit a non existent url on the site and click the return home link | User should return to site homepage | Works as expected |
 
-Results are the same as user story 1.
+Results are the same as user story 1 for the Navigation Buttons.
 
+<details>
+<summary>404 Results</summary>
+<br>
+<img alt="404 Results" src="docs/images/testing-404-page.gif">
+</details>
+<br>
 
 ### Client (Site Owner) Stories
 7. As the __Site Owner__, I want users to be able to contact us for custom requests or issues.
@@ -366,7 +385,7 @@ Link functionaly evidence has been redacted to prevent public exposure of PII in
 <details>
 <summary>Code to show email and web links</summary>
 <br>
-<img alt="Order Form Test Results" src="docs/images/testing-link-code.png">
+<img alt="Code proof for email and slack link" src="docs/images/testing-link-code.png">
 </details>
 <br>
 
