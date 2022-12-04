@@ -105,7 +105,7 @@ I selected the pinkish red __Carmine__ (#990011) as a brilliant background color
 
 > As Protanopia cannot distinguish Red from black, care was taken to ensure the the carmine was not placed on black anc vice versa
 
-The colour [palette](https://coolors.cpalo/990011-fcf6f5-03090a) was created using the Coolors [website](https://coolors.co/).
+The colour [palette](https://coolors.co/990011-fcf6f5-03090a) was created using the Coolors [website](https://coolors.co/).
 
 ### Fonts
 
