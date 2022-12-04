@@ -256,18 +256,9 @@ The WAVE WebAIM web accessibility evaluation tool was used to ensure the website
 
 + index.html [results](https://wave.webaim.org/report#/https://bovinehero.com/new-server-order-quiz/index.html)
 
-TODO: look at this
+While there were no Accessibility Errors on the site, 1 Accessibility Alert was discovered:
 
-
-#### Errors
-
-No Accessibility Errors on site
-
-#### Alerts
-
-1 Accessibility Alert discovered on site:
-
-+ A `<noscript>` element is present. Not an issue as the content within `<noscript>` is a simple paragraph styled the same way as the text below.
++ A `<noscript>` element is present. Deemed not an issue as the content within `<noscript>` as the content of the no script was the same HTML code as the JS generated components.
 
 ### Performance
 
