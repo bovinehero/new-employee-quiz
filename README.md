@@ -3,7 +3,7 @@
 
 ![Mockup image](docs/images/git-header.png)
 > TODO: get from amiresponsive
-> TODO: move the nojs workflow into the noscript
+> TODO: Fix the slideshow nav
 
 [Live Site](https://bovinehero.com/vm-order-generator/index.html) is hosted on github pages with a custom DNS CNAME provided by Google DNS.
 

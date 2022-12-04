@@ -49,10 +49,8 @@ a {
 }
 
 .quiz-window {
-    display: flex;
-    flex-flow: column wrap;
     padding: 1rem;
-    justify-content: center;
+    height: 90vh;
 }
 
 .quiz-header {
@@ -66,12 +64,13 @@ a {
 .quiz-description-wrapper {
     background: var(--main-pair-color);
     padding: 1rem;
+    height: 80%;
+    overflow: auto;
 }
 
 .quiz-description {
     background: var(--main-pair-color);
     position: relative;
-    height: 50vh;
 }
 
 .question-slide {
@@ -82,6 +81,15 @@ a {
     z-index: 1;
     opacity: 0;
     transition: opacity 1s;
+}
+
+
+#question-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80vh;
+    justify-content: flex-end
 }
 
 .active-slide {
@@ -97,7 +105,7 @@ button {
     border: none;
     margin: 8px 4px;
     padding: 4px 8px;
-    text-decoration: none;
+
 }
 
 input[type=submit] {
@@ -184,7 +192,7 @@ label {
 input[type=radio] {
     accent-color: var(--main-color);
 }
-
+/* 
 @media screen and (min-width: 480px) {
     .quiz-description-wrapper {
         background: var(--main-pair-color);
@@ -239,7 +247,6 @@ input[type=radio] {
     }
 
     input[type=submit] {
-        /* for no js workflow */
         margin: 16px 8px;
         padding: 16px 24px;
         font-size: large;
@@ -254,4 +261,4 @@ input[type=radio] {
     input[type=submit] {
         margin: 32px 16px;
     }
-}
+} */
