@@ -311,6 +311,17 @@ The website was tested on the following browsers:
 #### Employee
 1. As a __Site User__, I would like to raise an order for a new VM.
 
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Questions Slideshow | Progress the order through the slides to find the desired options, clicking submit to the final page will submit them downstream | Users should be able to select one option from each question and this valus should be submited to formdump | Works as expected |
+
+<details>
+<summary>Slide Show Quiz Results</summary>
+<br>
+<img alt="Slide Show Quiz Results" src="docs/images/testing-slide-show.gif">
+</details>
+<br>
+
 2. As a __Site User__, I would like to select different hardware specifications (OS, CPU, Disk sizes etc) for my VM.
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
