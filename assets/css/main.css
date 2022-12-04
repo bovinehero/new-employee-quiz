@@ -25,6 +25,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     color: var(--main-pair-invert);
     background: var(--main-color);
+    font-size: 1rem;
 }
 
 ol li, ul li {
@@ -200,5 +201,11 @@ input[type=radio] {
     /* move up the buttons when screen is vertical and not small */
     #question-form {
         height: 60vh;
+    }
+}
+
+@media screen and ( min-width: 520px ) {
+    .quiz-window {
+        width: 70vh;
     }
 }
