@@ -7,9 +7,7 @@
 2. Bug hunt and discuss
 3. test user stories
 4. Finalise media query styles
-
-
-
+5. Final Code review
 
 ![Mockup image](docs/images/git-header.png)
 > TODO: get from amiresponsive
@@ -90,7 +88,7 @@ Thus this project endevours to simulate the process of requesting a new Virtual 
 2. I would like to select different hardware specifications (OS, CPU, Disk sizes etc) for my VM.
 3. I would like to specify the physical and logical environments for the VM's deployment.
 4. I would like to review my answers before submission.
-5. I should be able to change the answers to questions before submission.
+5. I should be able to see information on how to use that app.
 6. I would like to be able to navigate between questions.
 
 ### Client (Site Owner) Stories
@@ -317,17 +315,31 @@ The website was tested on the following browsers:
 
 3. As a __Site User__, I would like to specify the physical and logical environments for the VM's deployment.
 
-4. As a __Site User__, I would like to review my answers before submission and be able to change the answers to questions before submission.
+4. As a __Site User__, I would like to review my answers before submission.
 
 
-5. As a __Site User__, I should be able to contact support if there are any issues or quries I might have.
+5. As a __Site User__, I should be able to see information on how to use that app.
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| Help Modal | TBD | TBD | TBD |
+| Help Modal | Visit the site and click on the "?" icon next to the VM Request Header | Modal opens with instructions for the order and links to support email and slack | Works as expected |
+
+
+<details>
+<summary>Help Modal Results</summary>
+<br>
+<img alt="Help Modal Results" src="docs/images/testing-help-modal.gif">
+</details>
+<br>
 
 
 6. As a __Site User__, I would like to be able to easily navigate between questions.
+
+| **Feature** | **Action** | **Expected Result** | **Actual Result** |
+|-------------|------------|---------------------|-------------------|
+| Navigation buttons | Visit the site and use the various next, previous, close, review and submit buttons | Allbutton functionality works as expected to take user to correct question or perform's correct action. | Works as expected |
+
+Results are the same as user story 1.
 
 
 ### Client (Site Owner) Stories
@@ -335,11 +347,21 @@ The website was tested on the following browsers:
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
-| Help Modal | TBD | TBD | TBD |
+| Help Modal | Visit the site and click on the "?" icon next to the VM Request Header, NAvigate to the bottom and click on the Email or Slack Icons | Modal opens with instructions for the order and links to support email and slack | Works as expected |
+
+Results to launch the modal are the same as user story 5.
+
+Link functionaly evidence has been redacted to prevent public exposure of PII info.
+
+<details>
+<summary>Code to show email and web links</summary>
+<br>
+<img alt="Order Form Test Results" src="docs/images/testing-link-code.png">
+</details>
+<br>
 
 
-
-8. As the __Site Owner__, I want users without Javascript enabled to be able complete an order
+8. As the __Site Owner__, I want users without JavaScript enabled to be able complete an order
 
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
