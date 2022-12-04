@@ -4,10 +4,9 @@
 
 ### TODO List
 1. import the wireframes
-2. Bug hunt and discuss
-3. test user stories
-4. Finalise media query styles
-5. Final Code review
+2. Finalise media query styles, Bug hunt and discuss 
+3. amiresponsive
+3. Final Code review and comments
 
 ![Mockup image](docs/images/git-header.png)
 > TODO: get from amiresponsive
