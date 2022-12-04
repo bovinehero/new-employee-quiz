@@ -302,3 +302,11 @@ The website was tested on the following browsers:
 | **Feature** | **Action** | **Expected Result** | **Actual Result** |
 |-------------|------------|---------------------|-------------------|
 | noscript fallback content | Visit the site with JavaScript disabled in browser complete the form and hit submit | Data submited via form to downstream API | Works as expected |
+
+
+<details>
+<summary>Sign Up Form Results</summary>
+<br>
+<img alt="Sign Up Form Test Results" src="docs/images/testing-noscript-fallback.gif">
+</details>
+<br>
