@@ -2,7 +2,9 @@
 * Main JavaScript for the site
 */
 
-// init questions varaible for quiz
+/**
+* init questions varaible for quiz
+*/
 const questions = [];
 
 /** defined questions array for the quiz, questions with more than 8 answers options may spill out of the answer box on smaller screens. 
@@ -97,7 +99,9 @@ const radioQuestions = [
     }
 ];
 
-// define the DOM elements to set up the quiz area
+/**
+ * define the DOM elements to set up the quiz area
+ */
 let questionsContainer = document.getElementById('questions');
 let submit = document.getElementById('submit');
 
@@ -128,8 +132,8 @@ function buildQuestions(){
 /**
  * Return the HTML code for a given question as an array
  * @param {Object} answersData - the key pairs for the question answers
- * @param {string} inputName - details for the radio input name and label
- * @returns 
+ * @param {String} inputName - details for the radio input name and label
+ * @returns {Array} htmlAnswers - list of the html code for the answers to the inputed question
  */
 function fetchAnswers(answersData, inputName){
     let htmlAnswers = [];
@@ -153,7 +157,7 @@ function fetchAnswers(answersData, inputName){
 /**
  * return the selected answer for a question
  * @param {String} questionName - name value for an input question
- * @returns 
+ * @returns {String} answer - selected answer to the question
  */
 function returnAnswer(questionName) {
     let answeredQuestions = document.getElementsByName(questionName);
@@ -204,7 +208,10 @@ const span2 = document.getElementsByClassName("close-modal")[1];
 const modal = document.getElementById("review-modal");
 const help = document.getElementById("help-modal");
 
-// set inital slide page to the first question
+
+/**
+ * set inital slide page to the first question.
+ */
 let currentSlide = 0;
 
 /**
@@ -292,10 +299,15 @@ window.onclick = function(event) {
   }
 };
 
-// display current slide
+/**
+ * display current slide
+ */
 showSlide(currentSlide);
 
-// event listeners once all content is loaded
+/**
+ * event listeners for all the buttons are actioned once all content is loaded
+ * @event document#mouseclick 
+ */
 submit.addEventListener('click', showAnswers);
 previous.addEventListener("click", showPreviousSlide);
 next.addEventListener("click", showNextSlide);
@@ -303,6 +315,10 @@ review.addEventListener("click", reviewAnswers);
 helper.addEventListener("click",launchHelp);
 closeReview.addEventListener("click", closeModal);
 closeHelp.addEventListener("click", closeModal);
-// When the user clicks on <span> (x), close the modal
+
+/**
+ * When the user clicks on <span> (x), also close the modal
+ * @event document#mouseclick 
+ */
 span.addEventListener("click", closeModal);
 span2.addEventListener("click", closeModal);
