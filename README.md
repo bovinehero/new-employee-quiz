@@ -3,9 +3,8 @@
 
 
 ### TODO List
-1. import the wireframes
-2. Bug hunt and discuss 
-3. Final Code review and comments
+1. Bug hunt and discuss 
+2. Final Code review and comments
 
 ![Mockup image](docs/images/git-header.png)
 
@@ -135,8 +134,6 @@ Additionally there is a 404 page included that will return the website user to t
 ### Wireframes
 
 Wireframes were created on desktop for a mobile first approach was initially considered, the wireframes below show the initial concept for the site. 
-
-> TODO: make the wireframes
 
 <br>
 <details>
