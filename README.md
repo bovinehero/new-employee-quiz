@@ -1,10 +1,6 @@
 # New Server Requisition Order (Quiz)
 (Developer: Gary Grant)
 
-
-### TODO List
-1. Final Code review and comments
-
 ![Mockup image](docs/images/git-header.png)
 
 [Live Site](https://bovinehero.com/new-server-order-quiz/index.html) is hosted on github pages with a custom DNS CNAME provided by Google DNS.
