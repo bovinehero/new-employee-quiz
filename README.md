@@ -3,8 +3,7 @@
 
 
 ### TODO List
-1. Bug hunt and discuss 
-2. Final Code review and comments
+1. Final Code review and comments
 
 ![Mockup image](docs/images/git-header.png)
 
@@ -226,9 +225,14 @@ The website is comprised of a single page app, a mock response of a downstream a
 
 ### Future Implementations
 
+Essentially this web app was built to explore the possibility of a JavaScript driven form submission, as a result it doesn't necessarily follow best form desgin practices.
+Most of the functionality explored here can be replicated either through a call to a serverside serivce or expressed in pure HTML, if I needed to write this service again I would consider implementing it with very little javascript as it would reduce the size and complexity of the codebase.
+
 + Upstream Database system and API to make the available configurations call more real time.
 + Downstream API integration to place the order request into a work queue
 + The backend form validation, as the form control is implemented only on client side technologies a tech savvy user could bypass these and post direct to the form endpoint without declaring values for all the inputs.
++ more focus on the desgin of the app, the interface is functional but basic.
+
 
 ### Accessibility Features
 I have been mindful during coding to ensure that the website is as accessible friendly as possible. I have achieved this by:
@@ -412,7 +416,7 @@ Link functionaly evidence has been redacted to prevent public exposure of PII in
 
 ## Bugs
 
-> TODO: Find and Discuss the Bugs
+I was not able to identify any undocumented bugs.
 
 ## Deployment & Local Development
 
