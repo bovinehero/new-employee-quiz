@@ -7,7 +7,7 @@
 */
 const questions = [];
 
-/** defined questions array for the quiz, questions with more than 8 answers options may spill out of the answer box on smaller screens. 
+/** defined questions array for the quiz. 
  * should follow the following format:
  * {
  *   question: "This is the question that will be displayed",
