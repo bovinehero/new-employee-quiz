@@ -132,11 +132,18 @@ Wireframes were created on desktop for a mobile first approach was initially con
 
 <br>
 <details>
-<summary>Index Page Wireframe Mobile </summary>
+<summary>Index Page Wireframe </summary>
 <br>
 <img alt="wireframe image for index page" src="docs/images/wireframe-index.png">
 </details>
 <br>
+<details>
+<summary>404 Page Wireframe </summary>
+<br>
+<img alt="wireframe image for index page" src="docs/images/wireframe-404.png">
+</details>
+<br>
+
 
 The landing page is the same design for all screen sizes, but is allowed to expand down if the information volume in the text box requires it. On larger screen sizes the fonts and buttons change size to use more of the screen real estate via media queries.
 
@@ -413,6 +420,15 @@ Link functionaly evidence has been redacted to prevent public exposure of PII in
 ## Bugs
 
 I was not able to identify any undocumented bugs.
+
+During the development process, I tried to maintain a methodical approach of build, test then commit. This ensured a relatively low rate of issues in the final stages of the project.
+
+Some issues that came up:
+
++ semantic errors in the JavaScript generated for/id relationships between the radio inputs and labels - Highlighted and fixed in accessibility testing.
++ The noscript solution was accidentally nested in the JavaScript generated form - Highlighted and fixed in HTML validation testing.
++ missing semi-colons - Highlighted and fixed in JSHint testing
+
 
 ## Deployment & Local Development
 
