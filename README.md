@@ -252,11 +252,16 @@ The W3C Markup Validation Service was used to validate the HTML of the website.
 
 index.html [results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fbovinehero.com%2Fnew-server-order-quiz%2Findex.html) - No Errors or Warnings Found
 
+404.html [results](https://validator.w3.org/nu/?doc=https%3A%2F%2Fbovinehero.com%2Fnew-server-order-quiz%2F404.html) - No Errors or Warnings Found
+
+
 ### CSS Validation
 
 The W3C Jigsaw CSS Validation Service was used to validate the CSS of the website.
 
-site [results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fbovinehero.com%2Fnew-server-order-quiz%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) - No Errors or Warnings Found
+index.html [results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fbovinehero.com%2Fnew-server-order-quiz%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) - No Errors or Warnings Found
+
+404.html [results](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fbovinehero.com%2Fnew-server-order-quiz%2F404.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) - No Errors or Warnings Found
 
 ### JavaScript Validation
 
@@ -428,6 +433,7 @@ Some issues that came up:
 + semantic errors in the JavaScript generated for/id relationships between the radio inputs and labels - Highlighted and fixed in accessibility testing.
 + The noscript solution was accidentally nested in the JavaScript generated form - Highlighted and fixed in HTML validation testing.
 + missing semi-colons - Highlighted and fixed in JSHint testing
++ 404 JavaScript and Styles not always loading due to where they are hosted - fixed by including the styles and JS inline on the 404.html page
 
 
 ## Deployment & Local Development
